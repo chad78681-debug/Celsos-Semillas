@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="discription" content="Organic Seeds, Mexican Herbs, Sold here.">
+        <meta name="keywords" content="Papalo, epazote, sunflower, semillas, mexico">
+        <meta name="author" content="Celso's Semillas">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        
+       
+<link rel="stylesheet" href="C:\Users\User\Documents\Celsos Semillas\style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Celso's Semillas</title>
+</head>
+
+<body>
+    <header class="header1">
+
+    <nav class="navbar">
+<ul class="nav-links">
+  <li><a href="Celsco website.html"><img class="small_logo" src="photos/A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"></a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="login.html">Log In/Register</a></li>
+            <li><a href="learnmore.html">Learn More</a> </li>
+        </ul>
+    <a href="shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+    
+    </nav>
+    </header>
+    <img class="pagelogo" src="C:\Users\User\Documents\Celsos Semillas\Photos\main LOGO.jpg" alt="logo">
+    <h1>Papalo Semillas</h1>
+    <div class="products">
+    <div class="product">
+        <img src="C:\Users\User\Documents\Celsos Semillas\Photos\papalo seed 1.jpg" alt="Papalo-close-up"id="main-img"> 
+<div class="small-img-row"> 
+    <div class="small-img-col">
+        <img src="Photos/papalo close up 1.jpg" alt="Papalo-close-up"class="small-img">
+    </div>
+</div>
+<div class="small-img-row"> 
+    <div class="small-img-col">
+        <img src="Photos/papalo field 1.jpg" alt="Papalo field"class="small-img">
+</div>
+<div class="small-img-row"> 
+    <div class="small-img-col">
+        <img src="Photos/papalo seed 1.jpg" alt="Papalo-close-up"class="small-img">
+    </div>
+</div>
+<div class="small-img-row"> 
+    <div class="small-img-col">
+        <img src="C:\Users\User\Documents\Celsos Semillas\Photos\wet-papalo.jpeg" alt="Wet Papalo"class="small-img">
+    </div>
+</div>
+        <h3>Papalo Seeds</h3>
+        <p>Price: $5.00</p>
+        <a href="https://www.ebay.com/itm/298373157290" target="_blank">Buy Now</a>
+    </div>
+    </body>
+<footer class="footer">
+    <hr>
+   <p>Authour: Chad Willliams</p>
+  <p>Email: Celsos-semillas@yahoo.com</p>
+    <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
+</footer>
+</html>
+
+
+<!------------JS for small image gallery------------>
+<script>
+    const mainImg = document.getElementById("main-img");
+    const smallImgs = document.querySelectorAll(".small-img");
+
+    smallImgs.forEach(img => {
+        img.addEventListener("click", () => {
+            mainImg.src = img.src;
+        });
+    });
+</script>
