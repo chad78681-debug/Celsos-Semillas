@@ -66,3 +66,17 @@ h1{text-align: center;}
         width: 100px;
         border-radius: 10px;
     }
+.body{
+ height:100vh;
+ display:flex;
+ flex-direction:column;
+ height: -webkit-fill-available;
+}
+.main{
+flex:1;
+overflow:scroll;
+}
+html{
+height: -webkit-fill-available;
+}
+
