@@ -49,12 +49,7 @@ h1{text-align: center;}
         p{text-align: center;}
         h3{text-align: center;}
         h4{text-align: center;}
-    footer{
-        background-color: rgba(64, 107, 38);
-        color: white;
-        text-align: center;
-        padding: 10px;
-    }   
+    
     .small-img-row{
         display: flex;
         justify-content: space-between;}
@@ -67,17 +62,10 @@ h1{text-align: center;}
         width: 100px;
         border-radius: 10px;
     }
-.body{
- height:100vh;
- display:flex;
- flex-direction:column;
- height: -webkit-fill-available;
-}
-.main{
-flex:1;
-overflow:scroll;
-}
-html{
-height: -webkit-fill-available;
-}
 
+footer{
+        background-color: rgba(64, 107, 38);
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }   
