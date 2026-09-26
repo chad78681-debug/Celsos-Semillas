@@ -13,7 +13,7 @@ position: relative;
 .nav-links{
 list-style: none;
 display: flex;
-gap: 25px;
+gap: 125px;
 margin:0;
 padding:0;
 justify-content: space-between;
