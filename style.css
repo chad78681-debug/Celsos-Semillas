@@ -1,6 +1,6 @@
 
  .navbar{
-
+display:inline-flex;
 align-items: center;
 background-color:rgba(64, 107, 38);
 color:white;
@@ -8,6 +8,7 @@ padding: 15px 30px;
 }       
 .small_logo{
     width: 110px;
+justify-content: space-between;
 position: relative;   
 }
 .nav-links{
