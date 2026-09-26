@@ -3,7 +3,7 @@
  .navbar{
   width:100%;
   max-width:inherit;
- 
+ gap:90px;
   top:0;
 display:inline-flex;
 align-items: center;
