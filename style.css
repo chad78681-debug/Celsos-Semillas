@@ -1,15 +1,9 @@
-.body{
- width:100%;
- max-width:800px;
- margin:auto;
- display: flex;
- flex-direction;column;
-}
+
 
  .navbar{
   width:100%;
   max-width:inherit;
-  position:fixed;
+ 
   top:0;
 display:inline-flex;
 align-items: center;
@@ -45,10 +39,7 @@ color: white;
     top: 10px;
 }
 
-main{
- flex-grow;1;
- padding:120px 1rem;
-}
+
 
 h1{text-align: center;}
         img{
@@ -91,6 +82,6 @@ footer{
         bottom:0;
   width:100%;
   max-width:inherit;
- position:fixed;
+
        
     }   
