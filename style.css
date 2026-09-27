@@ -1,7 +1,6 @@
 
 
-.navbar{
-   
+.navbar{ 
 width:100%;
 top:0;
 display:inline-flex;
@@ -21,7 +20,7 @@ position: relative;
 width:100%;
 list-style: none;
 display: flex;
-
+gap:60px;
 margin:0;
 padding:0;
 justify-content: space-between;
@@ -80,6 +79,5 @@ footer{
         text-align: center;
         padding: 10px;
         bottom:0;
-  width:100%;
-gap:90px;
+        width:100%;
 }   
