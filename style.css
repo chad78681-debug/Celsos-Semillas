@@ -1,9 +1,12 @@
+.body{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-
- .navbar{
-
-
- gap:90px;
+.navbar{
+  gap:90px;
   top:0;
 display:inline-flex;
 align-items: center;
