@@ -1,8 +1,7 @@
 
 
 .navbar{
-  gap:90px;
-  top:0;
+top:0;
 display:inline-flex;
 align-items: center;
 background-color:rgba(64, 107, 38);
@@ -17,9 +16,10 @@ position: relative;
 }
 
 .nav-links{
+width:100%;
 list-style: none;
 display: flex;
-
+gap:90px;
 margin:0;
 padding:0;
 justify-content: space-between;
