@@ -81,7 +81,5 @@ footer{
         padding: 10px;
         bottom:0;
   width:100%;
-  max-width:inherit;
-
-       
-    }   
+gap:90px;
+}   
