@@ -1,83 +1,605 @@
 
+/* ========================================
+CELSO'S SEMILLAS
+Natural & Organic Website Theme
+======================================== */
 
-.navbar{ 
-
-top:0;
-display:inline-flex;
-align-items: center;
-background-color:rgba(64, 107, 38);
-color:white;
-padding: 15px 30px;
-}   
-
-.small_logo{
-    width: 110px;
-justify-content: space-between;
-position: relative;   
+/* Color palette */
+ {
+--forest-green: #245C36;
+--dark-green: #193F28;
+--sage-green: #8BA888;
+--cream: #F8F6EF;
+--gold: #D9A441;
+--dark-text: #28352B;
+--white: #FFFFFF;
 }
 
-.nav-links{
-width:100%;
-list-style: none;
+/* Reset and base styles */
+
+{
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-color: var(--cream);
+color: var(--dark-text);
+line-height: 1.7;
+}
+
+/* ========================================
+NAVIGATION BAR
+======================================== */
+
+.header1 {
+width: 100%;
+background-color: var(--forest-green);
+position: relative;
+z-index: 100;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+width: 100%;
+max-width: 1400px;
+min-height: 90px;
+margin: 0 auto;
+padding: 12px 5%;
+
 display: flex;
-gap:60px;
-margin:0;
-padding:0;
+align-items: center;
 justify-content: space-between;
+gap: 25px;
+
 }
 
-.nav-links a{
+/* Brand and logo */
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+flex-shrink: 0;
+
+color: var(--white);
 text-decoration: none;
-color: white;
+font-size: 1.15rem;
+font-weight: bold;
+
 }
 
-.fa-solid{
-    color: white;
-    font-size: 30px;
-    position: relative;
-    top: 10px;
+.small_logo {
+width: 65px;
+height: 65px;
+object-fit: contain;
+border-radius: 50%;
 }
 
+/* Navigation links */
+.nav-links {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-wrap: wrap;
+gap: 12px 28px;
 
+list-style: none;
+margin: 0;
+padding: 0;
 
-h1{text-align: center;}
-        img{
-            width: 300px;
-            border-radius: 15px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto; 
-        
-        }
-        .pagelogo{
-            width: 300px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h2{text-align: center;}
-        p{text-align: center;}
-        h3{text-align: center;}
-        h4{text-align: center;}
-    
-    .small-img-row{
-        display: flex;
-        justify-content: space-between;}
-     
-    .small-img-col{
-        flexbasis: 25%;
-        cursor: pointer;
-    }
-    .small-img-col img{
-        width: 100px;
-        border-radius: 10px;
-    }
+}
 
-footer{
-        background-color: rgba(64, 107, 38);
-        color: white;
-        text-align: center;
-        padding: 10px;
-        bottom:0;
-        width:100%;
-}   
+.nav-links a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+
+color: var(--white);
+text-decoration: none;
+font-size: 0.98rem;
+font-weight: 600;
+
+padding: 10px 0;
+transition: color 0.25s ease;
+
+}
+
+.nav-links a,
+.nav-links a {
+color: var(--gold);
+}
+
+.nav-links a,
+.brand,
+.button,
+.music-link {
+outline: 3px solid var(--gold);
+outline-offset: 4px;
+}
+
+/* Shopping cart icon */
+.nav-links .fa-cart-shopping {
+color: inherit;
+font-size: 1.15rem;
+position: static;
+}
+
+/* ========================================
+MAIN CONTENT
+======================================== */
+
+main {
+width: 100%;
+margin: 0 auto;
+}
+
+section {
+padding: 55px 20px;
+text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+line-height: 1.3;
+text-align: center;
+}
+
+h1 {
+color: var(--forest-green);
+font-size: clamp(2rem, 5vw, 3.2rem);
+margin: 20px 0;
+}
+
+h2 {
+color: var(--forest-green);
+font-size: clamp(1.6rem, 3vw, 2.2rem);
+margin: 0 0 25px;
+}
+
+h3 {
+color: var(--forest-green);
+font-size: 1.5rem;
+}
+
+h4 {
+color: var(--forest-green);
+font-size: 1.3rem;
+}
+
+p {
+text-align: center;
+max-width: 750px;
+margin: 15px auto;
+}
+
+/* ========================================
+HERO SECTION
+======================================== */
+
+.hero {
+background: linear-gradient(
+180deg,
+#F8F6EF 0%,
+#EEF2E8 100%
+);
+padding-top: 55px;
+padding-bottom: 65px;
+}
+
+.pagelogo {
+display: block;
+width: min(300px, 85%);
+height: auto;
+margin: 0 auto 25px;
+object-fit: contain;
+}
+
+.hero-text {
+font-size: 1.15rem;
+max-width: 650px;
+margin: 0 auto 28px;
+}
+
+/* Main call-to-action button */
+.button {
+display: inline-block;
+padding: 13px 28px;
+
+background-color: var(--forest-green);
+color: var(--white);
+text-decoration: none;
+font-weight: bold;
+
+border-radius: 8px;
+transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+.button {
+background-color: var(--dark-green);
+transform: translateY(-2px);
+}
+
+/* ========================================
+IMAGES
+======================================== */
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.content-image {
+display: block;
+width: min(450px, 100%);
+max-height: 520px;
+object-fit: contain;
+margin: 25px auto;
+border-radius: 14px;
+box-shadow: 0 5px 18px rgba(25, 63, 40, 0.12);
+}
+
+/* Default image treatment for existing content */
+main > img(.pagelogo) {
+width: min(450px, 100%);
+height: auto;
+margin: 25px auto;
+border-radius: 14px;
+}
+
+/* ========================================
+FAMILY AND FAITH SECTIONS
+======================================== */
+
+.family-section {
+background-color: var(--cream);
+}
+
+.faith-section {
+background-color: #E8EFE4;
+}
+
+.faith-section blockquote {
+max-width: 750px;
+margin: 0 auto;
+padding: 20px 25px;
+
+border-left: 4px solid var(--sage-green);
+color: var(--dark-text);
+
+font-size: 1.15rem;
+font-style: italic;
+text-align: left;
+
+}
+
+.verse-reference {
+color: var(--forest-green);
+font-weight: bold;
+margin-top: 18px;
+}
+
+/* ========================================
+MUSIC SECTION
+======================================== */
+
+.music-section {
+background-color: #EEF2E8;
+}
+
+.music-link {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+
+margin: 20px auto 30px;
+padding: 12px 24px;
+
+background-color: var(--forest-green);
+color: var(--white);
+text-decoration: none;
+font-weight: bold;
+
+border-radius: 8px;
+transition: background-color 0.25s ease;
+
+}
+
+.music-link {
+background-color: var(--dark-green);
+}
+
+.music-link i {
+font-size: 1.5rem;
+}
+
+/* Responsive YouTube video */
+.video-container {
+width: 100%;
+max-width: 800px;
+margin: 30px auto 0;
+aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+display: block;
+width: 100%;
+height: 100%;
+border: 0;
+border-radius: 12px;
+}
+
+/* ========================================
+SMALL IMAGE GALLERY
+======================================== */
+
+.small-img-row {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.small-img-col {
+flex: 0 1 25%;
+cursor: pointer;
+}
+
+.small-img-col img {
+display: block;
+width: 100px;
+max-width: 100%;
+border-radius: 10px;
+margin: 0 auto;
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+width: 100%;
+margin: 0;
+padding: 45px 5% 20px;
+
+background-color: var(--dark-green);
+color: var(--white);
+
+}
+
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 35px;
+align-items: start;
+
+}
+
+.footer h2,
+.footer h3 {
+color: var(--white);
+text-align: left;
+margin-top: 0;
+}
+
+.footer h2 {
+font-size: 1.5rem;
+}
+
+.footer h3 {
+font-size: 1.1rem;
+margin-bottom: 15px;
+}
+
+.footer p {
+max-width: none;
+text-align: left;
+margin: 8px 0;
+overflow-wrap: anywhere;
+}
+
+.footer-links {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+
+.footer-links a,
+.footer-contact a {
+color: #E0EBDD;
+text-decoration: none;
+overflow-wrap: anywhere;
+transition: color 0.25s ease;
+}
+
+.footer-links a,
+.footer-contact a {
+color: var(--gold);
+text-decoration: underline;
+}
+
+.footer-bottom {
+max-width: 1200px;
+margin: 35px auto 0;
+padding-top: 20px;
+border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-bottom p {
+text-align: center;
+font-size: 0.9rem;
+color: #E0EBDD;
+}
+
+/* ========================================
+RESPONSIVE TABLET LAYOUT
+======================================== */
+
+@media (max-width: 900px) {
+.navbar {
+padding: 15px 4%;
+gap: 15px;
+}
+
+.brand {
+    font-size: 1rem;
+}
+
+.small_logo {
+    width: 55px;
+    height: 55px;
+}
+
+.nav-links {
+    gap: 8px 16px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    gap: 22px;
+}
+
+}
+
+/* ========================================
+RESPONSIVE MOBILE LAYOUT
+======================================== */
+
+@media (max-width: 650px) {
+.navbar {
+flex-direction: column;
+justify-content: center;
+gap: 12px;
+padding: 15px;
+}
+
+.brand {
+    justify-content: center;
+}
+
+.small_logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 5px 18px;
+}
+
+.nav-links a {
+    padding: 8px 2px;
+    font-size: 0.9rem;
+}
+
+section {
+    padding: 40px 18px;
+}
+
+.hero {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.pagelogo {
+    width: min(250px, 85%);
+}
+
+.hero-text {
+    font-size: 1rem;
+}
+
+.content-image {
+    width: min(100%, 380px);
+}
+
+.faith-section blockquote {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.footer {
+    padding: 35px 22px 18px;
+}
+
+.footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.footer h2,
+.footer h3 {
+    text-align: center;
+}
+
+.footer-about p,
+.footer-contact p {
+    text-align: center;
+}
+
+.footer-links {
+    align-items: center;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+}
+
+}
+
+/* ========================================
+SMALL MOBILE PHONES
+======================================== */
+
+@media (max-width: 380px) {
+.nav-links {
+gap: 4px 12px;
+}
+
+.nav-links a {
+    font-size: 0.82rem;
+}
+
+.button {
+    padding: 12px 18px;
+}
+
+}
+
+/* ========================================
+REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+html {
+scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+}
+
+}
