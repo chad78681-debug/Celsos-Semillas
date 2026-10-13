@@ -1,57 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="discription" content="Organic Seeds, Mexican Herbs, Sold here.">
-        <meta name="keywords" content="Papalo, epazote, sunflower, semillas, mexico">
-        <meta name="author" content="Celso's Semillas">
-        <meta name="viewport" content="width=device-width, intial-scale=1">
-        
-       
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Customer login and registration for Celso's Semillas.">
+    <meta name="keywords" content="Papalo, epazote, sunflower, semillas, Mexico">
+    <meta name="author" content="Celso's Semillas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login or Register | Celso's Semillas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <style>
+        .auth-container {
+            max-width: 480px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #dce5d7;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(36, 71, 25, 0.10);
+        }
+
+        .auth-container h2 {
+            color: #315f20;
+            text-align: center;
+        }
+
+        .auth-container label {
+            display: block;
+            margin-top: 16px;
+            font-weight: 600;
+        }
+
+        .auth-container input[type="email"],
+        .auth-container input[type="password"],
+        .auth-container input[type="text"] {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #b9c9b1;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        .auth-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #315f20;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .auth-button:hover {
+            background: #244719;
+        }
+
+        .auth-message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .auth-message:empty {
+            display: none;
+        }
+
+        .auth-links {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .auth-links button {
+            color: #315f20;
+            background: none;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            font: inherit;
+            margin: 5px;
+        }
+
+        .auth-hidden {
+            display: none;
+        }
+
+        .auth-logo {
+            display: block;
+            width: 150px;
+            max-width: 60%;
+            height: auto;
+            margin: 25px auto 0;
+        }
+    </style>
 </head>
+
 <body>
-    <header class="header1">
-
-   <nav class="navbar">
-<ul class="nav-links">
-  <li><a href="index.html"><img class="small_logo" src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"></a></li>
+<header class="header1">
+    <nav class="navbar" aria-label="Main navigation">
+        <ul class="nav-links">
+            <li>
+                <a href="index.html" aria-label="Celso's Semillas home">
+                    <img class="small_logo"
+                         src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
+                         alt="Celso's Semillas logo">
+                </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="login.html">Log In/Register</a></li>
-            <li><a href="learnmore.html">Learn More</a> </li>
-    <a href="shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-</ul>
+            <li><a href="login.html" aria-current="page">Log In/Register</a></li>
+            <li><a href="learnmore.html">Learn More</a></li>
+            <li>
+                <a href="shoppingcart.html" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    Cart
+                </a>
+            </li>
+        </ul>
     </nav>
+</header>
 
-    </header>
-    <main>
-    <img class="pagelogo" src="main LOGO.jpg" alt="logo">
-    <h1>Celso's Semillas</h1>
-    
-    <h2>Log In</h2>
-    <form action="login_process.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Log In">
-    </form>
+<main>
+    <img class="pagelogo auth-logo"
+         src="main LOGO.jpg"
+         alt="Celso's Semillas">
 
-    <h2>Register</h2>
-    <form action="register_process.php" method="post">
-        <label for="new_username">Username:</label>
-        <input type="text" id="new_username" name="new_username" required><br><br>
-        <label for="new_password">Password:</label>
-        <input type="password" id="new_password" name="new_password" required><br><br>
-        <input type="submit" value="Register">
-    </form>
-    </main>
-</body>
+    <h1 style="text-align: center;">Celso's Semillas</h1>
+
+    <section class="auth-container" aria-labelledby="login-heading">
+        <h2 id="login-heading">Welcome Back</h2>
+
+        <form id="login-form">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" autocomplete="email"
+                   required>
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password"
+                   autocomplete="current-password" required>
+
+            <button class="auth-button" type="submit">Log In</button>
+        </form>
+
+        <div class="auth-links">
+            <button type="button" id="show-register">
+                Create an Account
+            </button>
+            <button type="button" id="show-reset">
+                Forgot Password?
+            </button>
+        </div>
+    </section>
+
+    <section class="auth-container auth-hidden"
+             id="register-section"
+             aria-labelledby="register-heading">
+        <h2 id="register-heading">Create Your Account</h2>
+
+        <form id="register-form">
+            <label for="register-name">Full Name</label>
+            <input type="text" id="register-name"
+                   autocomplete="name" maxlength="100" required>
+
+            <label for="register-email">Email Address</label>
+            <input type="email" id="register-email"
+                   autocomplete="email" required>
+
+            <label for="register-password">Create Password</label>
+            <input type="password" id="register-password"
+                   autocomplete="new-password"
+                   minlength="8" required>
+
+            <p>
+                Use at least 8 characters. Choose a strong, unique password.
+            </p>
+
+            <label>
+                <input type="checkbox" id="marketing-consent">
+                I'd like to receive promotional emails and special offers.
+            </label>
+
+            <button class="auth-button" type="submit">
+                Register
+            </button>
+        </form>
+
+        <div class="auth-links">
+            <button type="button" id="show-login">
+                Already have an account? Log In
+            </button>
+        </div>
+    </section>
+
+    <section class="auth-container auth-hidden"
+             id="reset-section"
+             aria-labelledby="reset-heading">
+        <h2 id="reset-heading">Reset Your Password</h2>
+
+        <form id="reset-form">
+            <label for="reset-email">Email Address</label>
+            <input type="email" id="reset-email"
+                   autocomplete="email" required>
+
+            <button class="auth-button" type="submit">
+                Send Password Reset Email
+            </button>
+        </form>
+
+        <div class="auth-links">
+            <button type="button" id="back-to-login">
+                Back to Login
+            </button>
+        </div>
+    </section>
+
+    <section class="auth-container auth-hidden"
+             id="account-section"
+             aria-labelledby="account-heading">
+        <h2 id="account-heading">Your Account</h2>
+        <p id="account-email"></p>
+        <p id="account-name"></p>
+        <p id="account-coupon"></p>
+
+        <button class="auth-button" id="logout-button" type="button">
+            Log Out
+        </button>
+    </section>
+
+    <p id="auth-message" class="auth-message"
+       role="status" aria-live="polite"></p>
+</main>
+
 <footer class="footer">
     <hr>
-   <p>Authour: Chad Willliams</p>
-  <p>Email: Celsos-semillas@yahoo.com</p>
+    <p>Celso's Semillas</p>
+    <p>Email: <a href="mailto:Celsos-semillas@yahoo.com">
+        Celsos-semillas@yahoo.com
+    </a></p>
     <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
 </footer>
+
+<script type="module">
+    import { createClient } from
+        'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+    // Replace these two placeholders with your Supabase project values.
+    const SUPABASE_URL = 'https://bfwxelmuvuvetlviwgay.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_NoA_gZ4gY88beef323L4bA_9V_TXhtT';
+
+    const message = document.getElementById('auth-message');
+
+    const sections = {
+        login: document.querySelector('#login-form').closest('.auth-container'),
+        register: document.getElementById('register-section'),
+        reset: document.getElementById('reset-section'),
+        account: document.getElementById('account-section')
+    };
+
+    function showMessage(text, success = false) {
+        message.textContent = text;
+        message.style.color = success ? '#244719' : '#9b1c1c';
+        message.style.background = success ? '#edf7e9' : '#fff0f0';
+    }
+
+    function showSection(name) {
+        Object.values(sections).forEach(section => {
+            section.classList.add('auth-hidden');
+        });
+
+        sections[name].classList.remove('auth-hidden');
+        message.textContent = '';
+    }
+
+    document.getElementById('show-register').addEventListener('click', () => {
+        showSection('register');
+    });
+
+    document.getElementById('show-reset').addEventListener('click', () => {
+        showSection('reset');
+    });
+
+    document.getElementById('show-login').addEventListener('click', () => {
+        showSection('login');
+    });
+
+    document.getElementById('back-to-login').addEventListener('click', () => {
+        showSection('login');
+    });
+
+    if (
+        SUPABASE_URL.includes('YOUR_SUPABASE') ||
+        SUPABASE_PUBLISHABLE_KEY.includes('YOUR_SUPABASE')
+    ) {
+        showSection('login');
+        showMessage('Setup needed: add your Supabase Project URL and publishable key to login.html.');
+    } else {
+        const supabase = createClient(
+            SUPABASE_URL,
+            SUPABASE_PUBLISHABLE_KEY
+        );
+
+        document.getElementById('register-form').addEventListener('submit', async event => {
+            event.preventDefault();
+
+            const name = document.getElementById('register-name').value.trim();
+            const email = document.getElementById('register-email').value.trim();
+            const password = document.getElementById('register-password').value;
+            const marketingConsent = document.getElementById('marketing-consent').checked;
+
+            showMessage('Creating your account...', true);
+
+            const { data, error } = await supabase.auth.signUp({
+                email,
+                password,
+                options: {
+                    emailRedirectTo: window.location.origin + '/login.html',
+                    data: {
+                        full_name: name,
+                        marketing_consent: marketingConsent
+                    }
+                }
+            });
+
+            if (error) {
+                showMessage(error.message);
+                return;
+            }
+
+            if (data.session) {
+                await updateAccount(data.user);
+                showMessage('Your account was created successfully!', true);
+            } else {
+                showMessage(
+                    'Registration received! Check your email for a verification link.',
+                    true
+                );
+            }
+        });
+
+        document.getElementById('login-form').addEventListener('submit', async event => {
+            event.preventDefault();
+
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value;
+
+            showMessage('Signing you in...', true);
+
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email,
+                password
+            });
+
+            if (error) {
+                showMessage('Unable to log in. Check your email and password, and verify your email if required.');
+                return;
+            }
+
+            await updateAccount(data.user);
+            showMessage('You are logged in!', true);
+        });
+
+        document.getElementById('reset-form').addEventListener('submit', async event => {
+            event.preventDefault();
+
+            const email = document.getElementById('reset-email').value.trim();
+
+            const { error } = await supabase.auth.resetPasswordForEmail(email, {
+                redirectTo: window.location.origin + '/login.html?reset=1'
+            });
+
+            if (error) {
+                showMessage(error.message);
+                return;
+            }
+
+            showMessage(
+                'If an account exists for that address, a password reset email will be sent.',
+                true
+            );
+        });
+
+        document.getElementById('logout-button').addEventListener('click', async () => {
+            const { error } = await supabase.auth.signOut();
+
+            if (error) {
+                showMessage('Could not log out. Please try again.');
+                return;
+            }
+
+            showSection('login');
+            showMessage('You have logged out.', true);
+        });
+
+        async function updateAccount(user) {
+            showSection('account');
+
+            document.getElementById('account-email').textContent =
+                'Email: ' + (user.email || '');
+
+            document.getElementById('account-name').textContent =
+                'Name: ' + (user.user_metadata?.full_name || 'Customer');
+
+            // This is only a welcome message, not a validated coupon.
+            document.getElementById('account-coupon').textContent =
+                'First-purchase offers may be available at checkout.';
+
+            // Future work: retrieve coupon eligibility from a secure backend.
+        }
+
+        async function refreshSession() {
+            const { data, error } = await supabase.auth.getSession();
+
+            if (error) {
+                showMessage('Unable to check your login status. Please refresh.');
+                return;
+            }
+
+            if (data.session) {
+                await updateAccount(data.session.user);
+            } else if (new URLSearchParams(window.location.search).has('reset')) {
+                showSection('reset');
+                showMessage('Enter a new password after opening the reset link.', true);
+            } else {
+                showSection('login');
+            }
+        }
+
+        supabase.auth.onAuthStateChange((event, session) => {
+            if (event === 'SIGNED_OUT') {
+                showSection('login');
+            }
+        });
+
+        refreshSession();
+    }
+</script>
+</body>
 </html>
