@@ -1,62 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="discription" content="Organic Seeds, Mexican Herbs, Sold here.">
-        <meta name="keywords" content="Papalo, epazote, sunflower, semillas, mexico">
-        <meta name="author" content="Celso's Semillas">
-        <meta name="viewport" content="width=device-width, intial-scale=1">
-        
-       
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Celso's Semillas</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Seeds | Celso's Semillas</title>
+
+    <meta name="description"
+          content="Shop quality seeds at Celso's Semillas. Explore our seed collection and grow something wonderful.">
+
+    <!-- Font Awesome for the shopping cart icon -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="957AZ7LMPT8UA"></script>
 </head>
+
 <body>
-    <header class="header1">
 
-    <nav class="navbar">
-<ul class="nav-links">
-  <li><a href="index.html"><img class="small_logo" src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"></a></li>
+  <header class="header1">
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="index.html" class="brand">
+            <img
+                class="small_logo"
+                src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
+                alt="Celso's Semillas home"
+            >
+            <span>Celso's Semillas</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="login.html">Log In/Register</a></li>
-            <li><a href="learnmore.html">Learn More</a> </li>
-    <a href="shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-</ul>
+            <li><a href="learnmore.html">Learn More</a></li>
+            <li><a href="login.html">Log In / Register</a></li>
+            <li>
+              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+<script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+</script>
+                    
+                </a>
+            </li>
+        </ul>
+
     </nav>
+    <!-- INTRODUCTION -->
+
+    <header class="hero">
+        <h1>Grow Something Wonderful</h1>
+        <p>
+            Welcome to Celso's Semillas! Explore our seed collection
+            and bring a little more nature into your garden.
+        </p>
+      
     </header>
-    <main>
-    <img class="pagelogo" src="main LOGO.jpg" alt="logo">
-    <h1>Celso's Semillas</h1>
-    
 
+    <!-- PRODUCTS -->
 
+    <main class="products-section">
 
+        <h2 class="section-heading">Our Seed Collection</h2>
 
+        <p style="color: white;">
+            Browse our seeds, add items to your shopping cart, or visit
+            our eBay listings to purchase there.
+        </p>
 
+        <div id="cart-notice" class="notice" role="status" aria-live="polite"></div>
 
+        <div class="product-grid">
 
- <p>Browse our organic seeds on<span style="font-size: 45px;"><i class="fa-brands fa-ebay"></i></span></p>
-        <li><a href="https://www.ebay.com/itm/298373157290"target="_blank">Papalo Seeds</a></li>
-        <li><a href="https://www.ebay.com/itm/297823219955"target="_blank">Epazote Seeds</a></li>
-    <li><a href="https://www.ebay.com/itm/297818315295" target="_blank">Chile Pequin Seeds</a></li>
-    <li><a href="https://www.ebay.com/itm/298075416089"target="_blank">Arugula Seeds</a></li>
-<li><a href="https://www.ebay.com/itm/298260501409"target="_blank">Sweet Basil Seeds</a></li>
-<li><a href="https://www.ebay.com/itm/298017757874"target="_blank">Holly Berry Bush Seeds</a></li>
-<li><a href="https://www.ebay.com/itm/298410962158"target="_blank">Dandelion Seeds</a></li>
-<li><a href="https://www.ebay.com/itm/29841100092"target="_blank">Mowhawk Sacred Tabacco Seeds</a></li>
-<li><a href="https://www.ebay.com/itm/298439369525"target="_blank">Sunflower Seeds Helianthus Annuus</a></li>
-<li><a href="https://www.ebay.com/itm/298415818359"target="_blank">Pink Crape Myrtle Seeds</a></li>
-</ul>
+            <!-- PAPALO -->
 
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="images/papalo.jpg"
+                        alt="Papalo seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Papalo Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Papalo Seeds</h3>
+                    <p class="product-description">
+                        Grow papalo, a flavorful herb popular in Mexican
+                        cuisine. A distinctive addition to an herb garden.
+                    </p>
+                    <p class="product-price">$4.99</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Papalo Seeds"
+                                data-price="4.99">
+                           <paypal-add-to-cart-button data-id="9WZHVLDW59FV6"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "9WZHVLDW59FV6" })
+</script>
+                        
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298373157290"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- EPAZOTE -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\My websites\Celsos-Semillas\images\epazote.webp"
+                        alt="Epazote seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Epazote Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Epazote Seeds</h3>
+                    <p class="product-description">
+                        Plant epazote, a traditional culinary herb used
+                        in a variety of Mexican dishes.
+                    </p>
+                    <p class="product-price">$4.79</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Epazote Seeds"
+                                data-price="4.79">
+                            <paypal-add-to-cart-button data-id="JV9XUTBENL3SL"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "JV9XUTBENL3SL" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/297823219955"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CHILE PEQUIN -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\Documents\Celsos Semillas\Photos\chile-pequin.webp"
+                        alt="Chile Pequin seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Chile Pequin Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Chile Pequin Seeds</h3>
+                    <p class="product-description">
+                        Grow Chile Pequin plants for small, fiery peppers
+                        that add bold flavor to your garden.
+                    </p>
+                    <p class="product-price">$4.98</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Chile Pequin Seeds"
+                                data-price="4.98">
+                           <paypal-add-to-cart-button data-id="3AFJ9EWPR89UU"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "3AFJ9EWPR89UU" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/297818315295"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARUGULA -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\My websites\Celsos-Semillas\images\arugula.webp"
+                        alt="Arugula seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Arugula Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Arugula Seeds</h3>
+                    <p class="product-description">
+                        Add leafy greens to your garden with arugula,
+                        a popular salad green with a peppery flavor.
+                    </p>
+                    <p class="product-price">$3.95</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Arugula Seeds"
+                                data-price="3.95">
+                            <paypal-add-to-cart-button data-id="AASVTYHFYNEDC"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "AASVTYHFYNEDC" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298075416089"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SWEET BASIL -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\Documents\Celsos Semillas\Photos\sweet-basil.webp"
+                        alt="Sweet basil seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Sweet Basil Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Sweet Basil Seeds</h3>
+                    <p class="product-description">
+                        Grow fragrant sweet basil for fresh leaves
+                        in salads, sauces, and home-cooked meals.
+                    </p>
+                    <p class="product-price">$4.80</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Sweet Basil Seeds"
+                                data-price="4.80">
+                           <paypal-add-to-cart-button data-id="LJM46PAERDWSS"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "LJM46PAERDWSS" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298260501409"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- HOLLY BERRY BUSH -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\My websites\Celsos-Semillas\images\holly-berry.webp"
+                        alt="Holly berry bush seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Holly Berry Bush Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Holly Berry Bush Seeds</h3>
+                    <p class="product-description">
+                        Start a holly berry bush from seed and add
+                        an ornamental plant to your landscape.
+                    </p>
+                    <p class="product-price">$4.33</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Holly Berry Bush Seeds"
+                                data-price="4.33">
+                            <paypal-add-to-cart-button data-id="JFAXNWFBSPRS4"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "JFAXNWFBSPRS4" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298017757874"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- DANDELION -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\Documents\Celsos Semillas\Photos\dandelion.webp"
+                        alt="Dandelion seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Dandelion Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Dandelion Seeds</h3>
+                    <p class="product-description">
+                        Grow dandelions, a familiar flowering plant
+                        with bright blooms and distinctive seed heads.
+                    </p>
+                    <p class="product-price">$4.99</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Dandelion Seeds"
+                                data-price="4.99">
+                           <paypal-add-to-cart-button data-id="NQTUS5A4CGMZ4"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "NQTUS5A4CGMZ4" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298410962158"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- MOHawk SACRED TOBACCO -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\My websites\Celsos-Semillas\images\mowhawk.webp"
+                        alt="Mohawk Sacred Tobacco seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Mohawk Sacred Tobacco Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Mohawk Sacred Tobacco Seeds</h3>
+                    <p class="product-description">
+                        Explore this traditional plant variety. Follow
+                        applicable local rules when growing tobacco plants.
+                    </p>
+                    <p class="product-price">$6.50</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Mohawk Sacred Tobacco Seeds"
+                                data-price="6.50">
+                            <paypal-add-to-cart-button data-id="Z43W7UHDDASC8"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "Z43W7UHDDASC8" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/29841100092"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SUNFLOWER -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\Documents\Celsos Semillas\Photos\sunflower2.webp"
+                        alt="Sunflower seeds for planting"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Sunflower Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Sunflower Seeds</h3>
+                    <p class="product-description">
+                        Add cheerful sunflowers to your garden with
+                        plants known for their bright, sunny blooms.
+                    </p>
+                    <p class="product-price">$6.39</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Sunflower Seeds"
+                                data-price="6.39">
+                            <paypal-add-to-cart-button data-id="XRTHZATJX3QQW"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "XRTHZATJX3QQW" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298439369525"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PINK CRAPE MYRTLE -->
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img
+                        src="C:\Users\User\My websites\Celsos-Semillas\images\pink-crape-myrtle.webp"
+                        alt="Pink crape myrtle seeds"
+                        onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                    >
+                    <div class="image-placeholder" hidden>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Pink Crape Myrtle Seeds</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Pink Crape Myrtle Seeds</h3>
+                    <p class="product-description">
+                        Grow crape myrtle for a beautiful ornamental
+                        plant with colorful seasonal flowers.
+                    </p>
+                    <p class="product-price">$6.25</p>
+                    <div class="product-actions">
+                        <button class="button add-button"
+                                type="button"
+                                data-name="Pink Crape Myrtle Seeds"
+                                data-price="6.25">
+                            <paypal-add-to-cart-button data-id="XECKNU7RV4LZU"></paypal-add-to-cart-button>
+<script>
+  cartPaypal.AddToCart({ id: "XECKNU7RV4LZU" })
+</script>
+                        <a class="button ebay-button"
+                           href="https://www.ebay.com/itm/298415818359"
+                           target="_blank" rel="noopener noreferrer">
+                            Buy on eBay
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+<div class="footer-newsletter">
+    <h3>Join Our Growing Family!</h3>
+    <p>Get garden tips, new seed announcements, and email notifications when special discounts are available.</p>
+    <a href="https://eepurl.com/UuUeJ56894"
+       target="_blank"
+       rel="noopener noreferrer">
+        Sign Up for Special Discounts
+    </a>
+</div>
+<hr>
+
+        <p><strong>Celso's Semillas</strong></p>
+        <p>Thank you for supporting our seed store!</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="products.html">Products</a> |
+            <a href="learnmore.html">Learn More</a> |
+            <a href="shoppingcart.html">Shopping Cart</a>
+        </p>
+
+
+
+    </footer>
+
+    <!-- SHOPPING CART SCRIPT -->
+
+    
+      
+<script>
+const CART_KEY = "celsosSemillasCart";
+
+function getCart() {
+    try {
+        return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+    } catch (error) {
+        return [];
+    }
+}
+
+function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function updateCartCount() {
+    const countElement = document.getElementById("cart-count");
+
+    if (!countElement) return;
+
+    const cart = getCart();
+    const total = cart.reduce(
+        (sum, item) => sum + Number(item.quantity || 0),
+        0
+    );
+
+    countElement.textContent = total;
+}
+
+
+document.querySelectorAll(".add-button").forEach(button => {
+    button.addEventListener("click", function () {
+        const name = this.dataset.name;
+        const price = Number(this.dataset.price);
+
+        if (!name || !Number.isFinite(price) || price <= 0) {
+            alert("Product information is missing. Please check the product button.");
+            return;
+        }
+
+        const cart = getCart();
+        const existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity = Number(existingItem.quantity || 0) + 1;
+            existingItem.price = price;
+        } else {
+            cart.push({
+                name: name,
+                price: price,
+                quantity: 1
+            });
+        }
+
+        saveCart(cart);
+        updateCartCount();
+
+        const originalText = this.textContent;
+        this.textContent = "Added to Cart!";
+        this.disabled = true;
+
+        setTimeout(() => {
+            this.textContent = originalText;
+            this.disabled = false;
+        }, 1200);
+    });
+});
+
+updateCartCount();
+</script>
 </body>
-<footer class="footer">
-    <hr>
-   <p>Authour: Chad Willliams</p>
-  <p>Email: Celsos-semillas@yahoo.com</p>
-    <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
-</footer>
 </html>
-
-

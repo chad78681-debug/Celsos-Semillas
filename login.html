@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Customer login and registration for Celso's Semillas.">
-    <meta name="keywords" content="Papalo, epazote, sunflower, semillas, Mexico">
-    <meta name="author" content="Celso's Semillas">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login or Register | Celso's Semillas</title>
+    <title>Shop Seeds | Celso's Semillas</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="Shop quality seeds at Celso's Semillas. Explore our seed collection and grow something wonderful.">
+
+    <!-- Font Awesome for the shopping cart icon -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="957AZ7LMPT8UA"></script>
     <style>
+        
         .auth-container {
             max-width: 480px;
             margin: 40px auto;
@@ -102,37 +104,95 @@
             height: auto;
             margin: 25px auto 0;
         }
-    </style>
+
+        /* Make the login page background white */
+html,
+body {
+    background-color: #FFFFFF !important;
+}
+
+/* Keep the main page area white */
+main {
+    background-color: #FFFFFF !important;
+}
+
+/* Keep the login, registration, and reset boxes white */
+.auth-container {
+    background-color: #FFFFFF !important;
+}
+  /* Match the navigation bar and footer colors */
+
+/* Use one solid green across the top navigation */
+header.header1,
+header.header1 .navbar,
+.header1 .navbar {
+    background: #315F20 !important;
+    background-color: #315F20 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep navigation links white */
+.navbar a,
+.navbar a:visited {
+    color: #FFFFFF !important;
+}
+
+/* Keep the footer the same green */
+.footer {
+    background: #315F20 !important;
+    background-color: #315F20 !important;
+    background-image: none !important;
+}
+
+/* Keep navigation text and links white */
+.navbar a,
+.navbar a:visited,
+.footer,
+.footer a,
+.footer a:visited {
+    color: #FFFFFF;
+} 
+   
+   
+   </style>
 </head>
 
 <body>
 <header class="header1">
+   <header class="header1">
     <nav class="navbar" aria-label="Main navigation">
+
+        <a href="index.html" class="brand">
+            <img
+                class="small_logo"
+                src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
+                alt="Celso's Semillas home"
+            >
+            <span>Celso's Semillas</span>
+        </a>
+
         <ul class="nav-links">
-            <li>
-                <a href="index.html" aria-label="Celso's Semillas home">
-                    <img class="small_logo"
-                         src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
-                         alt="Celso's Semillas logo">
-                </a>
-            </li>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="login.html" aria-current="page">Log In/Register</a></li>
             <li><a href="learnmore.html">Learn More</a></li>
+            <li><a href="login.html">Log In / Register</a></li>
             <li>
-                <a href="shoppingcart.html" aria-label="Shopping cart">
-                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                    Cart
+              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+<script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+</script>
+                    
                 </a>
             </li>
         </ul>
+
     </nav>
 </header>
 
 <main>
     <img class="pagelogo auth-logo"
-         src="main LOGO.jpg"
+         src="C:\Users\User\My websites\Celsos-Semillas\images\main LOGO.jpg"
          alt="Celso's Semillas">
 
     <h1 style="text-align: center;">Celso's Semillas</h1>
@@ -242,12 +302,27 @@
 </main>
 
 <footer class="footer">
+   
+   <div class="footer-newsletter">
+    <h3>Join Our Growing Family!</h3>
+    <p>Get garden tips, new seed announcements, and email notifications when special discounts are available.</p>
+    <a href="https://eepurl.com/UuUeJ56894"
+       target="_blank"
+       rel="noopener noreferrer">
+        Sign Up for Special Discounts
+    </a>
+</div>
+
     <hr>
+
     <p>Celso's Semillas</p>
     <p>Email: <a href="mailto:Celsos-semillas@yahoo.com">
         Celsos-semillas@yahoo.com
     </a></p>
     <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
+
+
+
 </footer>
 
 <script type="module">
@@ -445,5 +520,31 @@
         refreshSession();
     }
 </script>
+
+<script>
+(function () {
+    const cartKey = "celsosSemillasCart";
+    const countElement = document.getElementById("cart-count");
+
+    if (!countElement) return;
+
+    function updateCartCount() {
+        try {
+            const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+            const total = cart.reduce(function (sum, item) {
+                return sum + Number(item.quantity || 0);
+            }, 0);
+
+            countElement.textContent = total;
+        } catch (error) {
+            countElement.textContent = "0";
+        }
+    }
+
+    updateCartCount();
+})();
+</script>
+
 </body>
 </html>
