@@ -1,54 +1,390 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="discription" content="Organic Seeds, Mexican Herbs, Sold here.">
-        <meta name="keywords" content="Papalo, epazote, sunflower, semillas, mexico">
-        <meta name="author" content="Celso's Semillas">
-        <meta name="viewport" content="width=device-width, intial-scale=1">
-        
-       
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shopping Cart | Celso's Semillas</title>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+>
+
+<link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Celso's Semillas</title>
+  
 </head>
+
 <body>
-    <header class="header1">
+  <header class="header1">
+    <nav class="navbar" aria-label="Main navigation">
 
-     <nav class="navbar">
-<ul class="nav-links">
-  <li><a href="index.html"><img class="small_logo" src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"></a></li>
+        <a href="index.html" class="brand">
+            <img
+                class="small_logo"
+                src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
+                alt="Celso's Semillas home"
+            >
+            <span>Celso's Semillas</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="login.html">Log In/Register</a></li>
-            <li><a href="learnmore.html">Learn More</a> </li>
-    <a href="shoppingcart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-</ul>
+            <li><a href="learnmore.html">Learn More</a></li>
+            <li><a href="login.html">Log In / Register</a></li>
+            <li>
+                <a href="shoppingcart.html" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                                        <span>Cart</span>
+<span id="cart-count" class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+
     </nav>
+</header>
 
-    </header>
-    <main>
-    <img class="pagelogo" src="main LOGO.jpg" alt="logo">
-    <h1>Celso's Semillas</h1>
-    
 
+  <main>
     <h2>Your Shopping Cart</h2>
-    <p>Your shopping cart is currently empty.</p> 
-    <p>Browse our products and add your favorite seeds to the cart to start your organic gardening journey.</p>
-    <p>Once you have added items to your cart, you can proceed to checkout to complete your purchase and have your organic seeds delivered to your doorstep.</p>
-    <p>If you encounter any issues with your shopping cart or checkout process, please contact our customer support for assistance.</p>
-    <p>We appreciate your business and look forward to helping you grow a thriving organic garden with our high-quality seeds.</p>
-    <p>Don't forget to check back regularly for new products, special offers, and gardening tips to enhance your organic gardening experience.</p>
-    <p>Happy gardening!</p>
-    <p>Remember to review your cart before checkout to ensure you have all the seeds you need for your garden.</p>
-    <p>If you have any questions about our products or need assistance with your order, our customer support team is here to help.</p>
-    <p>We strive to provide a seamless shopping experience and ensure that you receive your organic seeds promptly and in excellent condition.</p>
-    <p>Thank you for choosing Celso's Semillas for your organic gardening needs. We look forward to helping you grow a thriving and sustainable garden.</p>
-    </main>
+
+    <div class="cart-container">
+      <div id="cart-items"></div>
+
+      <div id="cart-summary" class="cart-summary" hidden>
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+
+        <div class="summary-row grand-total">
+          <span>Total:</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+
+        <p class="note">
+          Shipping and applicable taxes are not included.
+          This page calculates your cart total but does not
+          process payments or submit orders.
+        </p>
+
+        <div class="cart-actions">
+          <a class="button continue-button" href="products.html">
+            Continue Shopping
+          </a>
+
+          <button class="button clear-button" id="clear-cart" type="button">
+            Empty Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Celso's Semillas. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const CART_KEY = "celsosSemillasCart";
+
+    // These prices match the products page.
+    // They also provide prices for older cart items that
+    // were saved before prices were added to the cart.
+    const PRODUCT_PRICES = {
+      "Papalo Seeds": 4.99,
+      "Epazote Seeds": 4.79,
+      "Chile Pequin Seeds": 4.98,
+      "Arugula Seeds": 3.95,
+      "Sweet Basil Seeds": 4.80,
+      "Holly Berry Bush Seeds": 4.33,
+      "Dandelion Seeds": 4.99,
+      "Mowhawk Sacred Tobacco Seeds": 6.50,
+      "Sunflower Seeds": 6.39,
+      "Pink Crape Myrtle Seeds": 6.25
+    };
+    
+const PRODUCT_IMAGES = {
+  "Papalo Seeds": "images/papalo.jpg",
+  "Epazote Seeds": "images/epazote.webp",
+  "Chile Pequin Seeds": "images/chile-pequin.webp",
+  "Arugula Seeds": "images/arugula.webp",
+  "Sweet Basil Seeds": "images/sweet-basil.webp",
+  "Holly Berry Bush Seeds": "images/holly-berry.webp",
+  "Dandelion Seeds": "images/dandelion.webp",
+  "Mowhawk Sacred Tobacco Seeds": "images/mowhawk.webp",
+"Mohawk Sacred Tobacco Seeds": "images/mowhawk.webp",
+"Sunflower Seeds": "images/sunflower.webp",
+"Pink Crape Myrtle Seeds": "images/pink-crape-myrtle.webp"
+
+}
+    function getCart() {
+      try {
+        const savedCart = JSON.parse(
+          localStorage.getItem(CART_KEY) || "[]"
+        );
+
+        return Array.isArray(savedCart) ? savedCart : [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function getPrice(item) {
+      const savedPrice = Number(item.price);
+
+      if (Number.isFinite(savedPrice) && savedPrice >= 0) {
+        return savedPrice;
+      }
+
+      return PRODUCT_PRICES[item.name] ?? 0;
+    }
+
+    function formatMoney(amount) {
+      return "$" + amount.toFixed(2);
+    }
+
+    function renderCart() {
+      const cart = getCart();
+      const itemsContainer = document.getElementById("cart-items");
+      const summary = document.getElementById("cart-summary");
+
+      itemsContainer.replaceChildren();
+
+      if (cart.length === 0) {
+        summary.hidden = true;
+
+        const emptyMessage = document.createElement("div");
+        emptyMessage.className = "empty-message";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "Your cart is empty.";
+
+        const message = document.createElement("p");
+        message.textContent = "Find something for your garden!";
+
+        const link = document.createElement("a");
+        link.href = "products.html";
+        link.textContent = "Browse our seeds";
+
+        emptyMessage.append(heading, message, link);
+        itemsContainer.appendChild(emptyMessage);
+
+        return;
+      }
+
+      summary.hidden = false;
+
+      let subtotal = 0;
+
+      cart.forEach((item, index) => {
+        const price = getPrice(item);
+        const quantity = Math.max(
+          1,
+          Math.floor(Number(item.quantity) || 1)
+        );
+        const lineTotal = price * quantity;
+
+        subtotal += lineTotal;
+
+        // Save a reliable quantity and price for each item.
+        item.quantity = quantity;
+        item.price = price;
+
+       
+const row = document.createElement("div");
+row.className = "cart-item";
+
+const image = document.createElement("img");
+image.className = "cart-item-image";
+image.alt = item.name || "Seed product";
+image.loading = "lazy";
+image.src = PRODUCT_IMAGES[item.name] || "images/seed-placeholder.jpg";
+
+image.addEventListener("error", function () {
+  image.style.visibility = "hidden";
+});
+
+const name = document.createElement("div");
+name.className = "item-name";
+name.textContent = item.name || "Seed product";
+
+        const priceElement = document.createElement("div");
+        priceElement.className = "item-price";
+        priceElement.textContent = "Price: " + formatMoney(price);
+
+        const quantityControls = document.createElement("div");
+        quantityControls.className = "quantity-controls";
+
+        const decreaseButton = document.createElement("button");
+        decreaseButton.type = "button";
+        decreaseButton.textContent = "−";
+        decreaseButton.setAttribute(
+          "aria-label",
+          "Decrease quantity of " + item.name
+        );
+
+        decreaseButton.addEventListener("click", () => {
+          changeQuantity(index, -1);
+        });
+
+        const quantityNumber = document.createElement("span");
+        quantityNumber.className = "quantity-number";
+        quantityNumber.textContent = quantity;
+
+        const increaseButton = document.createElement("button");
+        increaseButton.type = "button";
+        increaseButton.textContent = "+";
+        increaseButton.setAttribute(
+          "aria-label",
+          "Increase quantity of " + item.name
+        );
+
+        increaseButton.addEventListener("click", () => {
+          changeQuantity(index, 1);
+        });
+
+        quantityControls.append(
+          decreaseButton,
+          quantityNumber,
+          increaseButton
+        );
+
+        const lineSubtotal = document.createElement("div");
+        lineSubtotal.className = "item-subtotal";
+        lineSubtotal.textContent = formatMoney(lineTotal);
+
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.className = "remove-button";
+        removeButton.textContent = "Remove";
+
+        removeButton.addEventListener("click", () => {
+          removeItem(index);
+        });
+
+       row.append(
+  image,
+  name,
+  priceElement,
+  quantityControls,
+  lineSubtotal,
+  removeButton
+);
+
+        itemsContainer.appendChild(row);
+      });
+
+      saveCart(cart);
+
+      document.getElementById("cart-subtotal").textContent =
+        formatMoney(subtotal);
+
+      document.getElementById("cart-total").textContent =
+        formatMoney(subtotal);
+    }
+
+    function changeQuantity(index, change) {
+      const cart = getCart();
+
+      if (!cart[index]) {
+        return;
+      }
+
+      const currentQuantity = Math.max(
+        1,
+        Math.floor(Number(cart[index].quantity) || 1)
+      );
+
+      const newQuantity = currentQuantity + change;
+
+      if (newQuantity < 1) {
+        return;
+      }
+
+      cart[index].quantity = newQuantity;
+      cart[index].price = getPrice(cart[index]);
+
+     saveCart(cart);
+renderCart();
+window.dispatchEvent(new Event("cartUpdated"));
+    }
+
+    
+function removeItem(index) {
+  const cart = getCart();
+
+  if (index < 0 || index >= cart.length) {
+    return;
+  }
+
+  cart.splice(index, 1);
+  saveCart(cart);
+  renderCart();
+  window.dispatchEvent(new Event("cartUpdated"));
+}
+
+
+    document.getElementById("clear-cart").addEventListener("click", () => {
+      const confirmed = window.confirm(
+        "Are you sure you want to remove all items from your cart?"
+      );
+
+     if (confirmed) {
+    saveCart([]);
+    renderCart();
+    window.dispatchEvent(new Event("cartUpdated"));
+}
+    });
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    renderCart();
+  </script>
+  
+
+<script>
+(function () {
+    const cartKey = "celsosSemillasCart";
+    const countElement = document.getElementById("cart-count");
+
+    function updateCartCount() {
+        if (!countElement) return;
+
+        try {
+            const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+            const total = cart.reduce(function (sum, item) {
+                return sum + Math.max(0, Number(item.quantity) || 0);
+            }, 0);
+
+            countElement.textContent = total;
+        } catch (error) {
+            countElement.textContent = "0";
+        }
+    }
+
+    // Show the current count when the page opens.
+    updateCartCount();
+
+    // Refresh the count whenever this page changes the cart.
+    window.addEventListener("cartUpdated", updateCartCount);
+
+    // Refresh if the cart changes in another browser tab.
+    window.addEventListener("storage", updateCartCount);
+})();
+</script>
+
+
 </body>
-<footer class="footer">
-    <hr>
-   <p>Authour: Chad Willliams</p>
-  <p>Email: Celsos-semillas@yahoo.com</p>
-    <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
-</footer>
 </html>
