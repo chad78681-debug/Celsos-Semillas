@@ -1151,3 +1151,30 @@ main > h2 {
     background-color: #244719;
 }
 
+
+/* Keep the eBay option separate below PayPal */
+.ebay-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #D9E2D4;
+}
+
+.ebay-label {
+    width: 100%;
+    margin: 0 0 10px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+}
+
+.ebay-section .ebay-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
