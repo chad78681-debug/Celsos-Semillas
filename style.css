@@ -1152,6 +1152,22 @@ main > h2 {
 }
 
 
+/* Keep PayPal purchase area wide enough for its button */
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+}
+
+.paypal-add-button {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 10px 0;
+}
+
 /* Keep the eBay option separate below PayPal */
 .ebay-section {
     display: flex;
