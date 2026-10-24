@@ -1194,3 +1194,48 @@ main > h2 {
     box-sizing: border-box;
     text-align: center;
 }
+
+
+.paypal-qr-code {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+.bitcoin-qr-container {
+  text-align: center;
+  width: 100%;
+  margin: 25px auto;
+}
+
+.bitcoin-qr-container .bitcoin-qr-code {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.bitcoin-qr-caption {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--forest-green, #315F20);
+  margin: 15px 0;
+  text-align: center;
+}
+
+.bitcoin-qr-container p {
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .bitcoin-qr-container .bitcoin-qr-code {
+    width: 260px;
+  }
+
+  .bitcoin-qr-caption {
+    font-size: 1.15rem;
+  }
+}
