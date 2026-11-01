@@ -13,7 +13,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="icon" type="image/jpeg" href="images/main LOGO facicon logo.jpg">
+    <link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="957AZ7LMPT8UA"></script>
     <style>
@@ -167,61 +167,74 @@ header.header1 .navbar,
             <img
                 class="small_logo"
                 src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
-                alt="Celso's Semillas home"
-            >
+                alt="Celso's Semillas home">
             <span>Celso's Semillas</span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="learnmore.html">Learn More</a></li>
-            <li><a href="login.html">Log In / Register</a></li>
-            <li><a href="support-farm.html">Support Our Farm</a></li>
             <li>
-              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-<script>
-  cartPaypal.Cart({ id: "pp-view-cart" })
-</script>
-                    
-                </a>
+                <a href="index.html" data-i18n="home" aria-current="page">Home</a>
+            </li>
+            <li>
+                <a href="products.html" data-i18n="products">Products</a>
+            </li>
+            <li>
+                <a href="learnmore.html" data-i18n="learnMore">Learn More</a>
+            </li>
+            <li>
+                <a href="login.html" data-i18n="login">Log In / Register</a>
+            </li>
+            <li>
+                <a href="support-farm.html" data-i18n="supportFarm">Support Our Farm</a>
+            </li>
+            <li>
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
             </li>
         </ul>
 
-    </nav>
+        
 
+    </nav>
 </header>
+
+<script>
+    cartPaypal.Cart({ id: "pp-view-cart" });
+</script>
+
+
 
 <main>
     <img class="pagelogo auth-logo"
-         src="images/main LOGO.jpg"
+         src="C:\Users\User\My websites\Celsos-Semillas\images\main LOGO.jpg"
          alt="Celso's Semillas">
 
     <h1 style="text-align: center;">Celso's Semillas</h1>
 
     <section class="auth-container" aria-labelledby="login-heading">
-        <h2 id="login-heading">Welcome Back</h2>
+       
 
-        <form id="login-form">
-            <label for="login-email">Email Address</label>
-            <input type="email" id="login-email" autocomplete="email"
-                   required>
+<h2 id="login-heading" data-i18n="welcomeBack">Welcome Back</h2>
 
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password"
-                   autocomplete="current-password" required>
+<form id="login-form">
+    <label for="login-email" data-i18n="emailAddress">Email Address</label>
+    <input type="email" id="login-email" autocomplete="email"
+           required>
 
-            <button class="auth-button" type="submit">Log In</button>
-        </form>
+    <label for="login-password" data-i18n="password">Password</label>
+    <input type="password" id="login-password"
+           autocomplete="current-password" required>
 
-        <div class="auth-links">
-            <button type="button" id="show-register">
-                Create an Account
-            </button>
-            <button type="button" id="show-reset">
-                Forgot Password?
-            </button>
-        </div>
+    <button class="auth-button" type="submit" data-i18n="logInButton">Log In</button>
+</form>
+
+<div class="auth-links">
+    <button type="button" id="show-register" data-i18n="createAccount">
+        Create an Account
+    </button>
+    <button type="button" id="show-reset" data-i18n="forgotPassword">
+        Forgot Password?
+    </button>
+</div>
     </section>
 
     <section class="auth-container auth-hidden"
@@ -229,100 +242,122 @@ header.header1 .navbar,
              aria-labelledby="register-heading">
         <h2 id="register-heading">Create Your Account</h2>
 
-        <form id="register-form">
-            <label for="register-name">Full Name</label>
-            <input type="text" id="register-name"
-                   autocomplete="name" maxlength="100" required>
+        
+                   <h2 id="register-heading" data-i18n="createYourAccount">Create Your Account</h2>
 
-            <label for="register-email">Email Address</label>
-            <input type="email" id="register-email"
-                   autocomplete="email" required>
+<form id="register-form">
+    <label for="register-name" data-i18n="fullName">Full Name</label>
+    <input type="text" id="register-name"
+           autocomplete="name" maxlength="100" required>
 
-            <label for="register-password">Create Password</label>
-            <input type="password" id="register-password"
-                   autocomplete="new-password"
-                   minlength="8" required>
+    <label for="register-email" data-i18n="emailAddress">Email Address</label>
+    <input type="email" id="register-email"
+           autocomplete="email" required>
 
-            <p>
-                Use at least 8 characters. Choose a strong, unique password.
-            </p>
+    <label for="register-password" data-i18n="createPassword">Create Password</label>
+    <input type="password" id="register-password"
+           autocomplete="new-password"
+           minlength="8" required>
 
-            <label>
-                <input type="checkbox" id="marketing-consent">
-                I'd like to receive promotional emails and special offers.
-            </label>
+    <p data-i18n="passwordRequirement">
+        Use at least 8 characters. Choose a strong, unique password.
+    </p>
 
-            <button class="auth-button" type="submit">
-                Register
-            </button>
-        </form>
+    <label>
+        <input type="checkbox" id="marketing-consent">
+        <span data-i18n="marketingConsent">I'd like to receive promotional emails and special offers.</span>
+    </label>
 
-        <div class="auth-links">
-            <button type="button" id="show-login">
-                Already have an account? Log In
-            </button>
-        </div>
+    <button class="auth-button" type="submit" data-i18n="registerButton">
+        Register
+    </button>
+</form>
+
+<div class="auth-links">
+    <button type="button" id="show-login" data-i18n="alreadyHaveAccount">
+        Already have an account? Log In
+    </button>
+</div>
     </section>
 
     <section class="auth-container auth-hidden"
              id="reset-section"
              aria-labelledby="reset-heading">
-        <h2 id="reset-heading">Reset Your Password</h2>
+        <h2 id="reset-heading" data-i18n="resetYourPassword">Reset Your Password</h2>
 
-        <form id="reset-form">
-            <label for="reset-email">Email Address</label>
-            <input type="email" id="reset-email"
-                   autocomplete="email" required>
+<form id="reset-form">
+    <label for="reset-email" data-i18n="emailAddress">Email Address</label>
+    <input type="email" id="reset-email"
+           autocomplete="email" required>
 
-            <button class="auth-button" type="submit">
-                Send Password Reset Email
-            </button>
-        </form>
+    <button class="auth-button" type="submit" data-i18n="sendResetEmail">
+        Send Password Reset Email
+    </button>
+</form>
 
-        <div class="auth-links">
-            <button type="button" id="back-to-login">
-                Back to Login
-            </button>
-        </div>
+<div class="auth-links">
+    <button type="button" id="back-to-login" data-i18n="backToLogin">
+        Back to Login
+    </button>
+</div>
     </section>
 
     <section class="auth-container auth-hidden"
              id="account-section"
              aria-labelledby="account-heading">
-        <h2 id="account-heading">Your Account</h2>
-        <p id="account-email"></p>
-        <p id="account-name"></p>
-        <p id="account-coupon"></p>
+       <h2 id="account-heading" data-i18n="yourAccount">Your Account</h2>
+<p id="account-email"></p>
+<p id="account-name"></p>
+<p id="account-coupon" data-i18n="firstPurchaseOffers">
+    First-purchase offers may be available at checkout.
+</p>
 
-        <button class="auth-button" id="logout-button" type="button">
-            Log Out
-        </button>
+<button class="auth-button" id="logout-button" type="button" data-i18n="logOut">
+    Log Out
+</button>
     </section>
 
     <p id="auth-message" class="auth-message"
        role="status" aria-live="polite"></p>
 </main>
 
-<footer class="footer">
    
-   <div class="footer-newsletter">
-    <h3>Join Our Growing Family!</h3>
-    <p>Get garden tips, new seed announcements, and email notifications when special discounts are available.</p>
-    <a href="https://eepurl.com/UuUeJ56894"
-       target="_blank"
-       rel="noopener noreferrer">
-        Sign Up for Special Discounts
-    </a>
-</div>
+  <footer class="footer">
+
+    <div class="footer-newsletter">
+
+        <h3 data-i18n="joinFamily">Join Our Growing Family!</h3>
+
+        <p data-i18n="newsletterText">
+            Get garden tips, new seed announcements, and email notifications when special discounts are available.
+        </p>
+
+        <a href="https://eepurl.com/UuUeJ56894"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-i18n="newsletterButton">
+            Sign Up for Special Discounts
+        </a>
+
+    </div>
 
     <hr>
-    <p>Celso's Semillas</p>
-    <p>Email: <a href="mailto:Celsos-semillas@yahoo.com">
-        Celsos-semillas@yahoo.com
-    </a></p>
-    <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
 
+    <p><strong>Celso's Semillas</strong></p>
 
+    <p data-i18n="footerThanks">
+        Thank you for supporting our seed store!
+    </p>
+
+    <p>
+        <a href="index.html" data-i18n="home">Home</a> |
+
+        <a href="products.html" data-i18n="products">Products</a> |
+
+        <a href="learnmore.html" data-i18n="learnMore">Learn More</a> |
+
+        <a href="shoppingcart.html" data-i18n="shoppingCart">Shopping Cart</a>
+    </p>
 
 </footer>
 
@@ -335,7 +370,11 @@ header.header1 .navbar,
     const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_NoA_gZ4gY88beef323L4bA_9V_TXhtT';
 
     const message = document.getElementById('auth-message');
-
+function t(key) {
+    return window.CelsosTranslations
+        ? window.CelsosTranslations.translate(key)
+        : key;
+}
     const sections = {
         login: document.querySelector('#login-form').closest('.auth-container'),
         register: document.getElementById('register-section'),
@@ -394,7 +433,7 @@ header.header1 .navbar,
             const password = document.getElementById('register-password').value;
             const marketingConsent = document.getElementById('marketing-consent').checked;
 
-            showMessage('Creating your account...', true);
+           showMessage(t('msgCreatingAccount'), true);
 
             const { data, error } = await supabase.auth.signUp({
                 email,
@@ -415,12 +454,9 @@ header.header1 .navbar,
 
             if (data.session) {
                 await updateAccount(data.user);
-                showMessage('Your account was created successfully!', true);
+              showMessage(t('msgAccountCreated'), true);
             } else {
-                showMessage(
-                    'Registration received! Check your email for a verification link.',
-                    true
-                );
+                showMessage(t('msgCheckEmail'), true);
             }
         });
 
@@ -430,7 +466,7 @@ header.header1 .navbar,
             const email = document.getElementById('login-email').value.trim();
             const password = document.getElementById('login-password').value;
 
-            showMessage('Signing you in...', true);
+          showMessage(t('msgSigningIn'), true);
 
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
@@ -438,12 +474,12 @@ header.header1 .navbar,
             });
 
             if (error) {
-                showMessage('Unable to log in. Check your email and password, and verify your email if required.');
+              showMessage(t('msgLoginFailed'));
                 return;
             }
 
             await updateAccount(data.user);
-            showMessage('You are logged in!', true);
+           showMessage(t('msgLoggedIn'), true);
         });
 
         document.getElementById('reset-form').addEventListener('submit', async event => {
@@ -460,36 +496,32 @@ header.header1 .navbar,
                 return;
             }
 
-            showMessage(
-                'If an account exists for that address, a password reset email will be sent.',
-                true
-            );
+            showMessage(t('msgResetSent'), true);
         });
 
         document.getElementById('logout-button').addEventListener('click', async () => {
             const { error } = await supabase.auth.signOut();
 
             if (error) {
-                showMessage('Could not log out. Please try again.');
+              showMessage(t('msgLogoutFailed'));
                 return;
             }
 
             showSection('login');
-            showMessage('You have logged out.', true);
+        showMessage(t('msgLoggedOut'), true);
         });
 
         async function updateAccount(user) {
             showSection('account');
 
             document.getElementById('account-email').textContent =
-                'Email: ' + (user.email || '');
+               t('accountEmail') + ' ' + (user.email || '');
 
             document.getElementById('account-name').textContent =
-                'Name: ' + (user.user_metadata?.full_name || 'Customer');
+             t('accountName') + ' ' + (user.user_metadata?.full_name || t('customer'));
 
             // This is only a welcome message, not a validated coupon.
-            document.getElementById('account-coupon').textContent =
-                'First-purchase offers may be available at checkout.';
+           document.getElementById('account-coupon').textContent = t('couponInfo');
 
             // Future work: retrieve coupon eligibility from a secure backend.
         }
@@ -498,7 +530,7 @@ header.header1 .navbar,
             const { data, error } = await supabase.auth.getSession();
 
             if (error) {
-                showMessage('Unable to check your login status. Please refresh.');
+              showMessage(t('msgSessionFailed'));
                 return;
             }
 
@@ -506,7 +538,7 @@ header.header1 .navbar,
                 await updateAccount(data.session.user);
             } else if (new URLSearchParams(window.location.search).has('reset')) {
                 showSection('reset');
-                showMessage('Enter a new password after opening the reset link.', true);
+              showMessage(t('msgResetInstructions'), true);
             } else {
                 showSection('login');
             }
@@ -546,6 +578,7 @@ header.header1 .navbar,
     updateCartCount();
 })();
 </script>
-
+<!-- Load translations after the page content -->
+<script src="translations.js"></script>
 </body>
 </html>
