@@ -198,58 +198,60 @@
 <body>
 
   <header class="header1">
-    <nav class="navbar" aria-label="Main navigation">
+   <nav class="navbar" aria-label="Main navigation">
 
         <a href="index.html" class="brand">
             <img
                 class="small_logo"
                 src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
-                alt="Celso's Semillas home"
-            >
+                alt="Celso's Semillas home">
             <span>Celso's Semillas</span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="learnmore.html">Learn More</a></li>
-            <li><a href="login.html">Log In / Register</a></li>
-            <li><a href="support-farm.html">Support Our Farm</a></li>
+            <li><a href="index.html" aria-current="page" data-i18n="home">Home</a></li>
+<li><a href="products.html" data-i18n="products">Products</a></li>
+<li><a href="learnmore.html" data-i18n="learnMore">Learn More</a></li>
+<li><a href="login.html" data-i18n="login">Log In / Register</a></li>
+<li><a href="support-farm.html" data-i18n="supportFarm">Support Our Farm</a></li>
             <li>
-              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-<script>
-  cartPaypal.Cart({ id: "pp-view-cart" })
-</script>
-                    
-                </a>
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
             </li>
         </ul>
 
+       
+
     </nav>
+<script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+</script>
 
   <main>
-    <section class="support-hero">
-      <h1>Help Our Growing Family Flourish! 🌱</h1>
+   <section class="support-hero">
+  <h1 data-i18n="supportHeroTitle">
+    Help Our Growing Family Flourish! 🌱
+  </h1>
 
-      <p>
-        Every seed has a story, every harvest carries a tradition,
-        and every helping hand makes a difference.
-        Thank you for being part of the Celso's Semillas family.
-      </p>
+  <p data-i18n="supportHeroText">
+    Every seed has a story, every harvest carries a tradition,
+    and every helping hand makes a difference.
+    Thank you for being part of the Celso's Semillas family.
+  </p>
 
-      <a href="#support-donations" class="support-button gold">
-        Support Our Farm
-      </a>
-    </section>
+  <a href="#support-donations" class="support-button gold"
+     data-i18n="supportFarmButton">
+    Support Our Farm
+  </a>
+</section>
 
     <section class="support-section" id="merchandise">
-      <h2>Wear Your Support 🌻</h2>
+      <h2 data-i18n="supportMerchTitle">Wear Your Support 🌻</h2>
 
-      <p class="support-intro">
-        Take a little piece of Celso's Semillas home with you!
-        Shop our logo merchandise and help support our family's
-        farming journey.
-      </p>
+      <p class="support-intro" data-i18n="supportMerchIntro">
+  Take a little piece of Celso's Semillas home with you!
+  Shop our logo merchandise and help support our family's
+  farming journey.
+</p>
 
       <div class="merch-grid">
 
@@ -259,17 +261,17 @@
   <!-- Celso's Semillas Shirt -->
   <article class="merch-card">
     <div class="merch-placeholder">
-    <img src="tshirt logo.webp" alt="Celso's Semillas Logo Shirt">
+    <img src="C:\Users\User\My websites\Celsos-Semillas\images\tshirt logo.webp" alt="Celso's Semillas Logo Shirt">
    
     </div>
 
-    <h3>Celso's Semillas Logo Shirt</h3>
+    <h3 data-i18n="supportShirtTitle">Celso's Semillas Logo Shirt</h3>
 
-    <p>
-      Show your support for Celso's Semillas with our
-      logo shirt. Wear your love of seeds, family,
-      and farming traditions!
-    </p>
+    <p data-i18n="supportShirtText">
+  Show your support for Celso's Semillas with our
+  logo shirt. Wear your love of seeds, family,
+  and farming traditions!
+</p>
 
     <a
       class="support-button"
@@ -277,24 +279,24 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      Shop Shirt on eBay
+    <span data-i18n="supportShopShirt">Shop Shirt on eBay</span>
     </a>
   </article>
 
   <!-- Celso's Semillas Logo Sticker -->
   <article class="merch-card">
     <div class="merch-placeholder">
-      <img src="sticker logo.webp" alt="Celso's Semillas Logo Sticker">
+      <img src="C:\Users\User\My websites\Celsos-Semillas\images\sticker logo.jpg" alt="Celso's Semillas Logo Sticker">
     
     </div>
 
-    <h3>Celso's Semillas Logo Sticker</h3>
+    <h3 data-i18n="supportStickerTitle">Celso's Semillas Logo Sticker</h3>
 
-    <p>
-      Take a little piece of our growing family with you!
-      Show off the Celso's Semillas logo on your
-      favorite belongings.
-    </p>
+    <p data-i18n="supportStickerText">
+  Take a little piece of our growing family with you!
+  Show off the Celso's Semillas logo on your
+  favorite belongings.
+</p>
 
     <a
       class="support-button"
@@ -302,7 +304,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      Shop Sticker on eBay
+     <span data-i18n="supportShopSticker">Shop Sticker on eBay</span>
     </a>
   </article>
 
@@ -311,57 +313,56 @@
     </section>
 
     <section class="support-section">
-      <h2>Our Dream: Growing More Than Seeds 🐝</h2>
-
+     <h2 data-i18n="supportDreamTitle">Our Dream: Growing More Than Seeds 🐝</h2>
       <div class="farm-story">
-        <p>
-          At Celso's Semillas, our roots run deep in family, faith,
-          agriculture, and tradition. We want to keep these traditions
-          alive while growing something meaningful for future generations.
-        </p>
+  <p data-i18n="supportStory1">
+    At Celso's Semillas, our roots run deep in family, faith,
+    agriculture, and tradition. We want to keep these traditions
+    alive while growing something meaningful for future generations.
+  </p>
 
-        <p>
-          <strong>Our next big dream is to acquire additional land
-          for our bee farm.</strong>
-        </p>
+  <p>
+    <strong data-i18n="supportStory2">
+      Our next big dream is to acquire additional land
+      for our bee farm.
+    </strong>
+  </p>
 
-        <p>
-          Bees are important pollinators, and we hope to create more
-          room for our beekeeping efforts as our farm grows. Your support
-          helps us work toward this goal, maintain our farming efforts,
-          and build a lasting family legacy.
-        </p>
+  <p data-i18n="supportStory3">
+    Bees are important pollinators, and we hope to create more
+    room for our beekeeping efforts as our farm grows. Your support
+    helps us work toward this goal, maintain our farming efforts,
+    and build a lasting family legacy.
+  </p>
 
-        <p>
-          Whether you shop our merchandise or contribute toward our
-          farm's future, we're grateful to have you growing with us.
-          Every bit of support means a great deal to our family.
-        </p>
-      </div>
+  <p data-i18n="supportStory4">
+    Whether you shop our merchandise or contribute toward our
+    farm's future, we're grateful to have you growing with us.
+    Every bit of support means a great deal to our family.
+  </p>
+</div>
     </section>
 
     <section class="support-section" id="support-donations">
-      <h2>Help Us Keep Growing 🌿</h2>
+      <h2 data-i18n="supportDonationTitle">Help Us Keep Growing 🌿</h2>
 
-      <p class="support-intro">
-        Would you like to help us continue our farming journey?
-        Choose a payment method below to support our farm and our
-        goal of expanding our bee farm.
-      </p>
+      <p class="support-intro" data-i18n="supportDonationIntro">
+  Would you like to help us continue our farming journey?
+  Choose a payment method below to support our farm and our
+  goal of expanding our bee farm.
+</p>
 
       <div class="support-grid">
 
         <article class="support-card">
-          <h3>Support Us with PayPal 💚</h3>
-
-          <p>
-            Your contribution helps us continue our work on the farm
-            and move closer to our dream of acquiring more land for bees.
-            Thank you for helping our family grow!
-          </p>
-
+          <h3 data-i18n="supportPaypalTitle">Support Us with PayPal 💚</h3>
+          <p data-i18n="supportPaypalText">
+  Your contribution helps us continue our work on the farm
+  and move closer to our dream of acquiring more land for bees.
+  Thank you for helping our family grow!
+</p>
           <img
-  src="QR Code for paypal donation.png"
+  src="images/QR Code for paypal donation.png"
   alt="PayPal donation QR code"
   class="paypal-qr-code"
 >
@@ -371,17 +372,17 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contribute with PayPal
+           <span data-i18n="supportPaypalButton">Contribute with PayPal</span>
           </a>
         </article>
 
         <article class="support-card">
-          <h3>Support Us with Bitcoin ₿</h3>
+         <h3 data-i18n="supportBitcoinTitle">Support Us with Bitcoin ₿</h3>
 
-          <p>
-            Prefer cryptocurrency? You can support our farming journey
-            using Bitcoin.
-          </p>
+         <p data-i18n="supportBitcoinText">
+  Prefer cryptocurrency? You can support our farming journey
+  using Bitcoin.
+</p>
 
           <!-- Add your verified public Bitcoin receiving address here.
                Never place a private key or recovery phrase on your website. -->
@@ -389,32 +390,34 @@
             bc1qqmk49mu09khlj4c68wyyehhgh5f3u7l5f3l9dw
           </p>
 
-          <p class="support-note">
+       <p class="support-note" data-i18n="supportBitcoinNote">
             Before sending, verify the receiving address and make sure
             your wallet is using the Bitcoin network. Cryptocurrency
             transfers generally cannot be reversed.
           </p>
 
 <div class="bitcoin-qr-container">
-  <h3>Donate with Bitcoin ₿</h3>
+  <h3 data-i18n="supportBitcoinQRTitle">Donate with Bitcoin ₿</h3>
 
   <img
-    src="celsos_semillas_bitcoin_qr.png"
+    src="C:\Users\User\My websites\Celsos-Semillas\images\celsos_semillas_bitcoin_qr.png"
     alt="Scan to donate Bitcoin to Celso's Semillas"
     class="bitcoin-qr-code"
   >
 
-  <p class="bitcoin-qr-caption">BITCOIN DONATION</p>
+  <p class="bitcoin-qr-caption" data-i18n="supportBitcoinCaption">
+  BITCOIN DONATION
+</p>
 
-  <p>
-    Thank you for helping our family farm grow! 🌱🐝
-  </p>
+ <p data-i18n="supportBitcoinThanks">
+  Thank you for helping our family farm grow! 🌱🐝
+</p>
 </div>
         </article>
 
       </div>
 
-      <p class="support-closing">
+     <p class="support-closing" data-i18n="supportClosing">
   Thank you for helping us grow a legacy of family, faith,
   and tradition. 🌱
 </p>
@@ -426,9 +429,7 @@
 
         <div class="footer-about">
             <h2>Celso's Semillas</h2>
-            <p data-i18n="footerText">
-                Growing a legacy of family, faith, and tradition.
-            </p>
+            <p data-i18n="footerTagline">Growing a legacy of family, faith, and tradition.</p>
         </div>
 
         <div class="footer-links">
@@ -459,20 +460,21 @@
         <div class="footer-contact">
             <h3 data-i18n="contactUs">Contact Us</h3>
             <p>
-                Email:
-                <a href="mailto:Celsos-semillas@yahoo.com">
-                    Celsos-semillas@yahoo.com
-                </a>
-            </p>
+    <span data-i18n="emailLabel">Email:</span>
+    <a href="mailto:Celsos-semillas@yahoo.com">
+        Celsos-semillas@yahoo.com
+    </a>
+</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>Website author: Chad Williams</p>
-        <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
+        <p data-i18n="websiteAuthor">Website author: Chad Williams</p>
+       <p data-i18n="copyright">&copy; 2026 Celso's Semillas. All rights reserved.</p>
     </div>
 </footer>
+
   <script src="translations.js"></script>
 </body>
 </html>
