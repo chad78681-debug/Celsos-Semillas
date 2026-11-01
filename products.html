@@ -13,7 +13,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="icon" type="image/jpeg" href="images/main LOGO facicon logo.jpg">
+    <link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="957AZ7LMPT8UA"></script>
 </head>
@@ -21,56 +21,54 @@
 <body>
 
   <header class="header1">
-   <nav class="navbar" aria-label="Main navigation">
+     <nav class="navbar" aria-label="Main navigation">
 
         <a href="index.html" class="brand">
             <img
                 class="small_logo"
                 src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
-                alt="Celso's Semillas home"
-            >
+                alt="Celso's Semillas home">
             <span>Celso's Semillas</span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="learnmore.html">Learn More</a></li>
-            <li><a href="login.html">Log In / Register</a></li>
-            <li><a href="support-farm.html">Support Our Farm</a></li>
+            
+<li><a href="index.html" data-i18n="home">Home</a></li>
+<li><a href="products.html" data-i18n="products">Products</a></li>
+<li><a href="learnmore.html" data-i18n="learnMore">Learn More</a></li>
+<li><a href="login.html" data-i18n="login">Log In / Register</a></li>
+<li><a href="support-farm.html" data-i18n="supportFarm">Support Our Farm</a></li>
+
             <li>
-              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-<script>
-  cartPaypal.Cart({ id: "pp-view-cart" })
-</script>
-                    
-                </a>
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
             </li>
         </ul>
 
+
     </nav>
+</header>
+
+<script>
+    cartPaypal.Cart({ id: "pp-view-cart" });
+</script>
 
     <!-- INTRODUCTION -->
 
-    <header class="hero">
-        <h1>Grow Something Wonderful</h1>
-        <p>
-            Welcome to Celso's Semillas! Explore our seed collection
-            and bring a little more nature into your garden.
-        </p>
-      
-    </header>
+   <header class="hero">
+    <h1 data-i18n="productsHeroTitle">Grow Something Wonderful</h1>
+ <p data-i18n="productsIntro">Welcome to Celso's Semillas! Explore our seed collection and bring a little more nature into your garden.</p>
+</header>
 
     <!-- PRODUCTS -->
 
     <main class="products-section">
 
-        <h2 class="section-heading">Our Seed Collection</h2>
+       <h2 data-i18n="plantCollection">Our Seed Collection</h2>
 
-        <p style="color: white;">
-            Browse our seeds, add items to your shopping cart, or visit
-            our eBay listings to purchase there.
-        </p>
+<p style="color: white;" data-i18n="seedCollectionIntro">
+    Browse our seeds, add items to your shopping cart, or visit
+    our eBay listings to purchase there.
+</p>
 
         <div id="cart-notice" class="notice" role="status" aria-live="polite"></div>
 
@@ -91,11 +89,8 @@
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Papalo Seeds</h3>
-                    <p class="product-description">
-                        Grow papalo, a flavorful herb popular in Mexican
-                        cuisine. A distinctive addition to an herb garden.
-                    </p>
+                   <h3 data-i18n="productPapaloName">Papalo Seeds</h3>
+                    <p class="product-description" data-i18n="productPapaloDescription">Grow papalo, a flavorful herb popular in Mexican cuisine. A distinctive addition to an herb garden.</p>
                     <p class="product-price">$4.99</p>
                    
 <div class="product-actions">
@@ -105,17 +100,13 @@
             cartPaypal.AddToCart({ id: "9WZHVLDW59FV6" });
         </script>
     </div>
-<div class="ebay-section">
-            <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button"
-       href="https://www.ebay.com/itm/298373157290"
-       target="_blank"
-       rel="noopener noreferrer">
-        Buy on eBay
-    </a>
+<div class="ebay-section">    
+    <p class="ebay-label">Prefer eBay?</p>
+     <div class="ebay-section">
+    <a href="https://www.ebay.com/itm/298373157290" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
+     </div>
+  
 </div>
-
-                </div>
             </article>
 
             <!-- EPAZOTE -->
@@ -135,12 +126,9 @@
     </div>
 
     <div class="product-info">
-        <h3>Epazote Seeds</h3>
+        <h3 data-i18n="productEpazoteName">Epazote Seeds</h3>
 
-        <p class="product-description">
-            Plant epazote, a traditional culinary herb used
-            in a variety of Mexican dishes.
-        </p>
+        <p class="product-description" data-i18n="productEpazoteDescription">Plant epazote, a traditional culinary herb used in a variety of Mexican dishes.</p>
 
         <p class="product-price">$4.79</p>
 
@@ -157,21 +145,13 @@
         <!-- Separate eBay option at the bottom -->
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a
-                class="button ebay-button"
-                href="https://www.ebay.com/itm/297823219955"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Buy on eBay
-            </a>
+            
+            <a href="https://www.ebay.com/itm/297823219955" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
+            
         </div>
     </div>
 </article>
-
-            <!-- CHILE PEQUIN -->
-
-           
+        
 
 <!-- CHILE PEQUIN -->
 <article class="product-card">
@@ -184,8 +164,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Chile Pequin Seeds</h3>
-        <p class="product-description">Grow chile pequin peppers for a spicy addition to your garden.</p>
+        <h3 data-i18n="productChileName">Chile Pequin Seeds</h3>
+        <p class="product-description" data-i18n="productChileDescription">Grow chile pequin peppers for a spicy addition to your garden.</p>
         <p class="product-price">$4.98</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -195,7 +175,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/297818315295" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+       <a href="https://www.ebay.com/itm/297818315295" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -211,8 +191,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Arugula Seeds</h3>
-        <p class="product-description">Add leafy greens to your garden with arugula, a popular salad green with a peppery flavor.</p>
+       <h3 data-i18n="productArugulaName">Arugula Seeds</h3>
+        <p class="product-description" data-i18n="productArugulaDescription">Add leafy greens to your garden with arugula, a popular salad green with a peppery flavor.</p>
         <p class="product-price">$3.95</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -222,7 +202,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298075416089" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+           <a href="https://www.ebay.com/itm/298075416089" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -238,8 +218,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Sweet Basil Seeds</h3>
-        <p class="product-description">Grow fragrant sweet basil for fresh leaves in salads, sauces, and home-cooked meals.</p>
+       <h3 data-i18n="productBasilName">Sweet Basil Seeds</h3>
+        <p class="product-description" data-i18n="productBasilDescription">Grow fragrant sweet basil for fresh leaves in salads, sauces, and home-cooked meals.</p>
         <p class="product-price">$4.80</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -249,7 +229,8 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298260501409" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+            <a href="https://www.ebay.com/itm/298260501409" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
+           
         </div>
     </div>
 </article>
@@ -265,8 +246,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Holly Berry Bush Seeds</h3>
-        <p class="product-description">Grow a holly berry bush and add ornamental greenery to your garden.</p>
+       <h3 data-i18n="productHollyName">Holly Berry Bush Seeds</h3>
+        <p class="product-description" data-i18n="productHollyDescription">Grow a holly berry bush and add ornamental greenery to your garden.</p>
         <p class="product-price">$4.33</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -276,7 +257,8 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298017757874" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+    <a href="https://www.ebay.com/itm/298017757874" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
+            
         </div>
     </div>
 </article>
@@ -292,9 +274,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Dandelion Seeds</h3>
-        <p class="product-description">Grow dandelions, a familiar flowering plant with bright blooms and distinctive seed heads.</p>
-        <p class="product-price">$4.99</p>
+        <h3 data-i18n="productDandelionName">Dandelion Seeds</h3>
+       <p class="product-description" data-i18n="productDandelionDescription">Grow dandelions, a familiar flowering plant with bright blooms and distinctive seed heads.</p>
         <div class="product-actions">
             <div class="paypal-add-button">
                 <paypal-add-to-cart-button data-id="NQTUS5A4CGMZ4"></paypal-add-to-cart-button>
@@ -303,7 +284,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298410962158" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+            <a href="https://www.ebay.com/itm/298410962158" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -319,8 +300,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Mohawk Sacred Tobacco Seeds</h3>
-        <p class="product-description">Explore this traditional plant for your seed collection.</p>
+        <h3 data-i18n="productMohawkName">Mohawk Sacred Tobacco Seeds</h3>
+        <p class="product-description" data-i18n="productMohawkDescription">Explore this traditional plant for your seed collection.</p>
         <p class="product-price">$6.50</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -330,7 +311,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/29841100092" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+            <a href="https://www.ebay.com/itm/29841100092" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -346,8 +327,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Sunflower Seeds</h3>
-        <p class="product-description">Grow sunflowers for their cheerful blooms and striking garden presence.</p>
+        <h3 data-i18n="productSunflowerName">Sunflower Seeds</h3>
+       <p class="product-description" data-i18n="productSunflowerDescription">Grow sunflowers for their cheerful blooms and striking garden presence.</p>
         <p class="product-price">$6.39</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -357,7 +338,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298439369525" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+            <a href="https://www.ebay.com/itm/298439369525" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -373,8 +354,8 @@
         </div>
     </div>
     <div class="product-info">
-        <h3>Pink Crape Myrtle Seeds</h3>
-        <p class="product-description">Grow crape myrtle for a beautiful ornamental plant with colorful seasonal flowers.</p>
+       <h3 data-i18n="productCrapeName">Pink Crape Myrtle Seeds</h3>
+       <p class="product-description" data-i18n="productCrapeDescription">Grow crape myrtle for a beautiful ornamental plant with colorful seasonal flowers.</p>
         <p class="product-price">$6.25</p>
         <div class="product-actions">
             <div class="paypal-add-button">
@@ -384,7 +365,7 @@
         </div>
         <div class="ebay-section">
             <p class="ebay-label">Prefer eBay?</p>
-            <a class="button ebay-button" href="https://www.ebay.com/itm/298415818359" target="_blank" rel="noopener noreferrer">Buy on eBay</a>
+            <a href="https://www.ebay.com/itm/298415818359" class="button ebay-button" target="_blank"rel="noopener noreferrer" data-i18n="buyOnEbay">Buy on eBay</a>
         </div>
     </div>
 </article>
@@ -395,30 +376,43 @@
     <!-- FOOTER -->
 
     <footer class="footer">
-<div class="footer-newsletter">
-    <h3>Join Our Growing Family!</h3>
-    <p>Get garden tips, new seed announcements, and email notifications when special discounts are available.</p>
-    <a href="https://eepurl.com/UuUeJ56894"
-       target="_blank"
-       rel="noopener noreferrer">
-        Sign Up for Special Discounts
-    </a>
-</div>
-<hr>
 
-        <p><strong>Celso's Semillas</strong></p>
-        <p>Thank you for supporting our seed store!</p>
-        <p>
-            <a href="index.html">Home</a> |
-            <a href="products.html">Products</a> |
-            <a href="learnmore.html">Learn More</a> |
-            <a href="shoppingcart.html">Shopping Cart</a>
+    <div class="footer-newsletter">
+
+        <h3 data-i18n="joinFamily">Join Our Growing Family!</h3>
+
+        <p data-i18n="newsletterText">
+            Get garden tips, new seed announcements, and email notifications when special discounts are available.
         </p>
 
+        <a href="https://eepurl.com/UuUeJ56894"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-i18n="newsletterButton">
+            Sign Up for Special Discounts
+        </a>
 
+    </div>
 
-    </footer>
+    <hr>
 
+    <p><strong>Celso's Semillas</strong></p>
+
+    <p data-i18n="footerThanks">
+        Thank you for supporting our seed store!
+    </p>
+
+    <p>
+        <a href="index.html" data-i18n="home">Home</a> |
+
+        <a href="products.html" data-i18n="products">Products</a> |
+
+        <a href="learnmore.html" data-i18n="learnMore">Learn More</a> |
+
+        <a href="shoppingcart.html" data-i18n="shoppingCart">Shopping Cart</a>
+    </p>
+
+</footer>
     <!-- SHOPPING CART SCRIPT -->
 
     
@@ -493,5 +487,7 @@ document.querySelectorAll(".add-button").forEach(button => {
 
 updateCartCount();
 </script>
+
+<script src="translations.js"></script>
 </body>
 </html>
