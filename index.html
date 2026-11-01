@@ -1,130 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shop Seeds | Celso's Semillas</title>
+    <title>Celso's Semillas | Seeds, Herbs &amp; Family Tradition</title>
 
     <meta name="description"
-          content="Shop quality seeds at Celso's Semillas. Explore our seed collection and grow something wonderful.">
+          content="Celso's Semillas offers seeds, Mexican herbs, and a celebration of family, agriculture, and tradition.">
 
-    <!-- Font Awesome for the shopping cart icon -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="icon" type="image/jpeg" href="images/main LOGO facicon logo.jpg">
+    <link rel="icon" type="image/jpeg" href="main LOGO facicon logo.jpg">
     <link rel="stylesheet" href="style.css">
-    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="957AZ7LMPT8UA"></script>
+
+    <!-- PayPal cart -->
+    <script src="https://www.paypalobjects.com/ncp/cart/cart.js"
+            data-merchant-id="957AZ7LMPT8UA"></script>
 </head>
 
 <body>
 
-  <header class="header1">
-    <nav class="navbar" aria-label="Main navigation">
+<header class="header1">
+     <nav class="navbar" aria-label="Main navigation">
 
         <a href="index.html" class="brand">
             <img
                 class="small_logo"
                 src="A3B91089-1409-40DA-A901-B8CD8E49F6BF.jpg"
-                alt="Celso's Semillas home"
-            >
+                alt="Celso's Semillas home">
             <span>Celso's Semillas</span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="learnmore.html">Learn More</a></li>
-            <li><a href="login.html">Log In / Register</a></li>
-            <li><a href="support-farm.html">Support Our Farm</a></li>
+            <li><a href="index.html" aria-current="page" data-i18n="home">Home</a></li>
+<li><a href="products.html" data-i18n="products">Products</a></li>
+<li><a href="learnmore.html" data-i18n="learnMore">Learn More</a></li>
+<li><a href="login.html" data-i18n="login">Log In / Register</a></li>
+<li><a href="support-farm.html" data-i18n="supportFarm">Support Our Farm</a></li>
             <li>
-              <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-<script>
-  cartPaypal.Cart({ id: "pp-view-cart" })
-</script>
-                    
-                </a>
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
             </li>
         </ul>
 
-    </nav>
+       
 
+    </nav>
+</header>
+
+<script>
+    cartPaypal.Cart({ id: "pp-view-cart" });
+</script>
 
 <main>
 
+    <!-- HERO -->
     <section class="hero">
         <img
             class="pagelogo"
-            src="main logo-crop.png"
-            alt="Celso's Semillas main logo"
-        >
+            src="images/main LOGO.jpg"
+            alt="Celso's Semillas main logo">
 
-        <h1>Our Family Story</h1>
+        <h1 data-i18n="homeStoryTitle">Our Family Story</h1>
 
-        <p class="hero-text">
-            Celebrating family, faith, Mexican herbs, and the traditions
-            that grow from the land.
+        <p data-i18n="heroDescription">
+            Celebrating family, faith, Mexican herbs, and the
+            traditions that grow from the land.
         </p>
 
-        <a href="products.html" class="button">Explore Our Products</a>
+       <a href="products.html" class="button" data-i18n="exploreProducts">Explore Our Products</a>
     </section>
 
+    <!-- FAMILY STORY -->
     <section class="family-section">
-        <h2>Bambi &amp; Celso</h2>
+        <h2 data-i18n="familyStory">Bambi &amp; Celso</h2>
 
         <img
             class="content-image"
-            src="images/Papo & Bambi.jpg"
+            src="images/Papo &amp; Bambi.jpg"
             alt="Bambi and Celso"
-        >
+            loading="lazy">
     </section>
 
+    <!-- BIBLE VERSE -->
     <section class="faith-section">
-        <h2>Bible Verse</h2>
+        <h2 data-i18n="bibleVerse">Bible Verse</h2>
 
-        <blockquote>
-            "Thus all the tithe of the land, of the seed of the land or
-            the fruit of the tree, is the LORD'S; it is holy to the LORD."
+        <blockquote data-i18n="verseText">
+            Thus all the tithe of the land, of the seed of the land or
+            the fruit of the tree, is the LORD'S; it is holy to the LORD.
         </blockquote>
 
-        <p class="verse-reference">Leviticus 27:30</p>
+        <p class="verse-reference" data-i18n="verseReference">
+            Leviticus 27:30
+        </p>
     </section>
 
+    <!-- INO SANCHEZ -->
     <section class="family-section">
-        <h2>Ino Sanchez</h2>
+        <h2 data-i18n="inoHeading">Ino Sanchez</h2>
 
         <img
             class="content-image"
-            src="images/mamo & paplos.jpeg"
+            src="images/mamo &amp; paplos.jpeg"
             alt="Ino Sanchez and her papalo field"
-            loading="lazy"
-        >
+            loading="lazy">
 
-        <p>
+        <p data-i18n="inoDescription">
             Ino Sanchez, Celso's wife, and her papalo field.
         </p>
     </section>
 
+    <!-- CELSO SANCHEZ -->
     <section class="family-section">
-        <h2>Celso Sanchez</h2>
+        <h2 data-i18n="celsoHeading">Celso Sanchez</h2>
 
         <img
             class="content-image"
             src="images/old photo of celso.jpg"
             alt="An old photograph of Celso Sanchez, also known as Papo"
-            loading="lazy"
-        >
+            loading="lazy">
 
-        <p>
+        <p data-i18n="celsoDescription">
             Remembering Celso Sanchez, also known as Papo.
         </p>
     </section>
 
+    <!-- MUSIC -->
     <section class="music-section">
-        <h2>Music from Celso</h2>
+       <h2 data-i18n="musicFromCelso">Music from Celso</h2>
 
-        <p>
+        <p data-i18n="musicDescription">
             Visit Apple Music to listen to Celso's album and enjoy
             songs inspired by his life.
         </p>
@@ -134,10 +142,10 @@
             href="https://music.apple.com/us/artist/celso-sanchez/1757904394"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Listen to Celso Sanchez on Apple Music"
-        >
+            aria-label="Listen to Celso Sanchez on Apple Music">
+
             <i class="fa-brands fa-apple" aria-hidden="true"></i>
-            Listen on Apple Music
+            <span data-i18n="listenApple">Listen on Apple Music</span>
         </a>
 
         <div class="video-container">
@@ -147,80 +155,86 @@
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-            ></iframe>
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
-<section class="newsletter-signup">
-    <h2>🌱 Join Our Growing Family!</h2>
-    <p>
-        Sign up for garden tips, new seed announcements,
-        and notifications when special discounts are available
-        on our website.
-    </p>
-    <a
-        href="https://eepurl.com/UuUeJ56894"
-        class="newsletter-button"
-        target="_blank"
-        rel="noopener noreferrer">
-        Get Garden Tips & Special Discounts
-    </a>
-</section>
+    <!-- NEWSLETTER -->
+    <section class="newsletter-signup">
+        <h2 data-i18n="newsletterHeading">🌱 Join Our Growing Family!</h2>
 
+        <p data-i18n="newsletterDescription">
+            Sign up for garden tips, new seed announcements,
+            and notifications when special discounts are available
+            on our website.
+        </p>
+
+        <a
+            href="https://eepurl.com/UuUeJ56894"
+            class="newsletter-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="gardenTipsButton">
+            Get Garden Tips &amp; Special Discounts
+        </a>
+    </section>
 
 </main>
 
-
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-content">
 
         <div class="footer-about">
             <h2>Celso's Semillas</h2>
-            <p>
-                Growing a legacy of family, faith, and tradition.
-            </p>
+            <p data-i18n="footerTagline">Growing a legacy of family, faith, and tradition.</p>
         </div>
 
         <div class="footer-links">
-            <h3>Quick Links</h3>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="learnmore.html">Learn More</a>
-            <a href="login.html">Log In / Register</a>
-            <a href="shoppingcart.html">Shopping Cart</a>
+            <h3 data-i18n="quickLinks">Quick Links</h3>
+            <a href="index.html" data-i18n="home">Home</a>
+            <a href="products.html" data-i18n="products">Products</a>
+            <a href="learnmore.html" data-i18n="learnMore">Learn More</a>
+            <a href="login.html" data-i18n="login">Log In / Register</a>
+            <a href="shoppingcart.html" data-i18n="shoppingCart">Shopping Cart</a>
         </div>
-        
-<div class="footer-newsletter">
-    <h3>🌱 Join Our Growing Family</h3>
-    <p>Get garden tips and email notifications
-       when special discounts are available!</p>
-    <a href="https://eepurl.com/UuUeJ56894"
-       target="_blank"
-       rel="noopener noreferrer">
-        Sign Up for Special Discounts
-    </a>
-</div>
 
+        <div class="footer-newsletter">
+            <h3 data-i18n="newsletterHeading">🌱 Join Our Growing Family</h3>
+
+            <p data-i18n="footerNewsletterDescription">
+                Get garden tips and email notifications when special discounts are available!
+            </p>
+
+            <a
+                href="https://eepurl.com/UuUeJ56894"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="footerNewsletterButton">
+                Sign Up for Special Discounts
+            </a>
+        </div>
 
         <div class="footer-contact">
-            <h3>Contact Us</h3>
+            <h3 data-i18n="contactUs">Contact Us</h3>
             <p>
-                Email:
-                <a href="mailto:Celsos-semillas@yahoo.com">
-                    Celsos-semillas@yahoo.com
-                </a>
-            </p>
+    <span data-i18n="emailLabel">Email:</span>
+    <a href="mailto:Celsos-semillas@yahoo.com">
+        Celsos-semillas@yahoo.com
+    </a>
+</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>Website author: Chad Williams</p>
-        <p>&copy; 2026 Celso's Semillas. All rights reserved.</p>
+        <p data-i18n="websiteAuthor">Website author: Chad Williams</p>
+       <p data-i18n="copyright">&copy; 2026 Celso's Semillas. All rights reserved.</p>
     </div>
 </footer>
 
+<!-- Preserve the existing cart-count behavior -->
 <script>
 (function () {
     const cartKey = "celsosSemillasCart";
@@ -246,5 +260,7 @@
 })();
 </script>
 
+<!-- Load translations after the page content -->
+<script src="translations.js"></script>
 </body>
 </html>
